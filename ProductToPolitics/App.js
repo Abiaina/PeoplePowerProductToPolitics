@@ -1,8 +1,7 @@
 import React from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button, Image } from 'react-native';
-import Politicians from './components/Politicians'
-import Barcode from './components/Barcode'
-
+import BarcodeScanner from './components/BarcodeScanner'
+import { BarCodeScanner, Permissions } from 'expo';
 
 
 export default class App extends React.Component {
@@ -14,9 +13,7 @@ useCamera() {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Barcode/>
-      </View>
+      <BarcodeScanner/>
     );
   }
 }

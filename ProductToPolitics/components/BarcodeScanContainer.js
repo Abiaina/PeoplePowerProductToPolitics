@@ -6,15 +6,16 @@ import { StyleSheet, Text, View, Image, Button } from 'react-native';
 export default class ProductDetails extends React.Component {
 
 //There should be a axios get request for the barcode api
-// 
+//
+showScanner () {
+  return (
+    <BarcodeScanner/>
+  )
+}
   render() {
     return (
       <View>
-        <Text>{this.props.barcode}</Text>
-        <Image
-         style={{width: 100, height: 100}}
-         source={{uri: 'https://pics.drugstore.com/prodimg/476553/900.jpg'}}
-         />
+        {this.showScanner}
       </View>
     );
   }

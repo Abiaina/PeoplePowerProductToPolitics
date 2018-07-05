@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import ProductDetails from './ProductDetails';
+import BarcodeScanner from './BarcodeScanner';
+
 export default class Barcode extends React.Component {
 
   constructor(props) {
@@ -19,7 +21,11 @@ export default class Barcode extends React.Component {
   showDetails() {
     if(this.state.showProduct){
       return(
-        <ProductDetails/>
+        // this should be a call to the barcode Scanner
+        <BarcodeScanner/>
+        <ProductDetails
+          barcode={this.props.barcode}
+        />
       )
     };
   }
