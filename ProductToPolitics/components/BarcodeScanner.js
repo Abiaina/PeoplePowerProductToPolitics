@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image, Button, } from 'react-native';
-import { BarCodeScanner, Permissions } from 'expo';
+import { Constants, BarCodeScanner, Permissions } from 'expo';
 
 
 export default class BarcodeScanner extends React.Component {
@@ -8,7 +8,6 @@ export default class BarcodeScanner extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        qrcode: '',
         hasCameraOk: null,
       }
     }
@@ -18,6 +17,9 @@ export default class BarcodeScanner extends React.Component {
       this.setState({hasCameraOk: status === 'granted'});
       }
 
+  _handleBarCodeRead = data => {
+        this.setState({qrcode: data})
+      };
 
   showDetails() {
     if(this.state.showProduct){
@@ -37,18 +39,22 @@ export default class BarcodeScanner extends React.Component {
       return <Text>Requesting for camera permission</Text>;
     } else if (hasCameraOk === false) {
       return <Text>No access to camera</Text>;
-    } else {
+    }
+    else {
       return (
         <View style={{ flex: 1 }}>
           <BarCodeScanner
             onBarCodeRead={this._handleBarCodeRead}
             style={StyleSheet.absoluteFill}
           />
+            {this.state.qrcode ? <Text>{JSON.stringify(this.state.qrcode)}</Text> : null}
         </View>
       );
   }
 }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
