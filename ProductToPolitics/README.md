@@ -1,9 +1,9 @@
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
 
-Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/react-community/create-react-native-app/blob/master/react-native-scripts/template/README.md).
+
 
 ## Table of Contents
-
+* [About Product To Politics](#about-product-to-politics)
 * [Updating to New Releases](#updating-to-new-releases)
 * [Available Scripts](#available-scripts)
   * [npm start](#npm-start)
@@ -25,6 +25,11 @@ Below you'll find information about performing common tasks. The most recent ver
   * [Networking](#networking)
   * [iOS Simulator won't open](#ios-simulator-wont-open)
   * [QR Code does not scan](#qr-code-does-not-scan)
+
+## About Product To Politics
+
+Android and IOS friendly app that allows you to scan almost any product's barcode and find out about its parent company's lobbying activity. Using opensecrets.org extensive database, expo react native and rails back-end.
+
 
 ## Updating to New Releases
 
