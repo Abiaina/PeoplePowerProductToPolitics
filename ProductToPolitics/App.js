@@ -1,34 +1,45 @@
 import React from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button, Image } from 'react-native';
-import BarcodeScanner from './components/BarcodeScanner'
+import ScanContainer from './components/ScanContainer'
+import ProductDetails from './components/ProductDetails'
 import { BarCodeScanner, Permissions } from 'expo';
+
 
 
 export default class App extends React.Component {
   constructor() {
-    super();
-    this.state = {
-      barcodeData: null
-    };
-    this.handleOnBarCodeRead = this.handleOnBarCodeRead.bind(this);
+      super();
+      this.state = {
+        scanBarcode: false,
+      };
+    }
+
+  toggleState = () => {
+    this.setState({
+        scanBarcode: !this.state.scanBarcode
+      });
   }
 
-  handleOnBarCodeRead(data) {
-    this.setState({
-      barcodeData: data
-    });
+  scanButton () {
+    return(
+      <Button onPress={this.toggleState}
+        title="Scan Barcode"
+        color="#841500"
+        accessibilityLabel="Scan barcode"
+        />
+    )
   }
+
 
   render() {
     return (
-      <View style={{ flex: 1 }}>
-      {(this.state.barcodeData) ? <Text>'barcode found'</Text> :
-       <BarcodeScanner
-        onBarCodeRead={this.handleOnBarCodeRead}
-       />}
+      <View style={styles.container}>
+        {(this.state.scanBarcode) ? <ScanContainer/> : this.scanButton() }
       </View>
     );
   }
+
+
 }
 
 const styles = StyleSheet.create({
