@@ -14,7 +14,7 @@ showScanner () {
 }
   render() {
     return (
-      <View>
+      <View >
         {this.showScanner}
       </View>
     );

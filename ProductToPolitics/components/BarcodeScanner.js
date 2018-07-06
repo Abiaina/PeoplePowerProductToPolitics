@@ -18,7 +18,7 @@ export default class BarcodeScanner extends React.Component {
       }
 
   _handleBarCodeRead = data => {
-        this.setState({qrcode: data})
+        this.props.onBarCodeRead(data);
       };
 
   showDetails() {
@@ -47,7 +47,6 @@ export default class BarcodeScanner extends React.Component {
             onBarCodeRead={this._handleBarCodeRead}
             style={StyleSheet.absoluteFill}
           />
-            {this.state.qrcode ? <Text>{JSON.stringify(this.state.qrcode)}</Text> : null}
         </View>
       );
   }
