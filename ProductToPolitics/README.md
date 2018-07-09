@@ -4,6 +4,7 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 ## Table of Contents
 * [About Product To Politics](#about-product-to-politics)
+* [Required Libraries](#required-libraries)
 * [Updating to New Releases](#updating-to-new-releases)
 * [Available Scripts](#available-scripts)
   * [npm start](#npm-start)
@@ -30,6 +31,22 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 Android and IOS friendly app that allows you to scan almost any product's barcode and find out about its parent company's lobbying activity. Using opensecrets.org extensive database, expo react native and rails back-end.
 
+## Required Libraries
+
+expo
+react-native
+python
+pip
+barcodescanner
+stylesheet
+beautiful soup
+csv
+requests
+axios
+
+Api help:
+open secrets: apis@crp.org
+also ask questions in the group: opensecrets-open-data@googlegroups.com
 
 ## Updating to New Releases
 
