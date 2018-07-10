@@ -23,5 +23,9 @@ for row in csv_f:
     id = obj.response.organization['orgid']
  ## get company info from orgId
     objSite = untangle.parse('https://www.opensecrets.org/api/?method=orgSummary&id=' + id + key)
+
  ## webscrape info from site
         objSite
+            # Turn the info into a json object and add it to the
+            # list of json objects, then write it into a file
+            jsonObjectDetails = json.dump(data pulled from webscrapping)
