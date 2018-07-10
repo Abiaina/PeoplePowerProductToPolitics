@@ -1,21 +1,26 @@
 import csv
+from unidecode import unidecode
 import requests
 from BeautifulSoup import BeautifulSoup
 
-url = 'https://www.foodengineeringmag.com/2017-top-100-food-and-beverage-companies'
+url = 'https://consumergoods.com/top-100-consumer-goods-companies-2017'
 response = requests.get(url)
 html = response.content
 
 soup = BeautifulSoup(html)
-table = soup.find('tbody')
+table = soup.find('table')
 
 list_of_rows = []
+# this going row by row
 for row in table.findAll('tr'):
     list_of_cells = []
-    for cell in row.findAll('strong'):
-        text = cell.text.replace('&nbsp;', '')
-    list_of_cells.append(text)
-    list_of_rows.append(list_of_cells)
+    # going looking for a link tag in the row
+    for cell in row.findAll('a'):
+        # this is checking the link tag for any non ascii char
+        text = unidecode(cell.text)
+        list_of_cells.append(text)
+    if list_of_cells:
+        list_of_rows.append(list_of_cells)
 
 outfile = open("./companies.csv", "wb")
 writer = csv.writer(outfile)
