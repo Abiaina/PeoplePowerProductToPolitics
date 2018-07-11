@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import csv
 from unidecode import unidecode
 import requests
@@ -65,7 +66,7 @@ def get_summary_data(site):
     }
 
     return data
-    
+
  ## get company name
 f = open('companies.csv')
 csv_f = csv.reader(f)

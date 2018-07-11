@@ -1,10 +1,10 @@
-    # -*- coding: utf-8 -*-
-    import csv
-    from unidecode import unidecode
-    import requests
-    import json
-    from BeautifulSoup import BeautifulSoup
-    import untangle
+# -*- coding: utf-8 -*-
+import csv
+from unidecode import unidecode
+import requests
+import json
+from BeautifulSoup import BeautifulSoup
+import untangle
 
 def get_summary_data(site):
     most_lobbied_bill = ''
