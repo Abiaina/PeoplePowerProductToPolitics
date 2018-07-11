@@ -1,12 +1,10 @@
-import csv
-from unidecode import unidecode
-import requests
-import json
-from BeautifulSoup import BeautifulSoup
-import untangle
-
-# do I need this?
-import ./companies.csv
+    # -*- coding: utf-8 -*-
+    import csv
+    from unidecode import unidecode
+    import requests
+    import json
+    from BeautifulSoup import BeautifulSoup
+    import untangle
 
 def get_summary_data(site):
     most_lobbied_bill = ''
@@ -65,22 +63,9 @@ def get_summary_data(site):
     }
 
     return data
-    
- ## get company name
-f = open('companies.csv')
-csv_f = csv.reader(f)
 
-summaryUrl = 'https://www.opensecrets.org/orgs/summary.php?id='
 
-idUrl = 'https://www.opensecrets.org/api/?method=getOrgs&org='
-key = '&apikey=' + OSKey
 
-companyDetails = []
-
-for row in csv_f:
- ## make api call for getId
- obj = untangle.parse(idUrl + row + key)
-    id = obj.response.organization['orgid']
-
- ## webscrape info from site
-        objSite = summaryUrl + id
+    # Turn the info into a json object and add it to the
+    # list of json objects, then write it into a file
+    # jsonObjectDetails = json.dump(data pulled from webscrapping)
