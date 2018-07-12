@@ -5,9 +5,9 @@ import requests
 import json
 from BeautifulSoup import BeautifulSoup
 import untangle
+import config
 
-# do I need this?
-import ./companies.csv
+
 
 def get_summary_data(site):
     most_lobbied_bill = ''
@@ -74,14 +74,20 @@ csv_f = csv.reader(f)
 summaryUrl = 'https://www.opensecrets.org/orgs/summary.php?id='
 
 idUrl = 'https://www.opensecrets.org/api/?method=getOrgs&org='
-key = '&apikey=' + OSKey
+key = '&apikey=' + config.os_key
 
 companyDetails = []
+
 
 for row in csv_f:
  ## make api call for getId
  obj = untangle.parse(idUrl + row + key)
-    id = obj.response.organization['orgid']
+ id = obj.response.organization['orgid']
 
  ## webscrape info from site
-        objSite = summaryUrl + id
+ objSite = summaryUrl + id
+ companyDetails.append(get_summary_data(objSite))
+
+outfile = open("./company_politics_details.csv", "wb")
+writer = csv.writer(outfile)
+writer.writerows(companyDetails)
