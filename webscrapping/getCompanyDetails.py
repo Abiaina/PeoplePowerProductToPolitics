@@ -9,7 +9,6 @@ import config
 import urllib
 
 
-
 def get_summary_data(site, name, id):
     most_lobbied_bill = ''
     top_recipients = []
@@ -48,9 +47,10 @@ def get_summary_data(site, name, id):
                 list_of_cells.append(text)
             if list_of_cells:
                 top_recipients.append(list_of_cells[0])
+    if len(top_recipients) > 2:
+        top_recipients.pop()
 
     # Politicians with Shares
-
     list = soup.findAll("ul", attrs={'id': 'members'})
     if list is not None:
         i = 0
@@ -64,14 +64,14 @@ def get_summary_data(site, name, id):
     money = soup.findAll("span", attrs={'class' : 'summ_data_num'})
 
     if money is not None and len(money) > 1:
-        total_contribution_dollars = money[0].text
-        total_lobby_dollars = money[1].text
+        total_contribution_dollars = money[0].text.replace('$','').replace(',','')
+        total_lobby_dollars = money[1].text.replace('$','').replace(',','')
 
     data = {
-        "company_name": unidecode(name).strip(),
+        "name": unidecode(name).strip(),
         "os_id": id,
         "most_lobbied_bill": most_lobbied_bill,
-        "top_recipients": top_recipients,
+        "recipients": top_recipients,
         "total_lobby_dollars": total_lobby_dollars,
         "total_contribution_dollars": total_contribution_dollars,
         "share_holder_politicians": share_holder_politicians,
