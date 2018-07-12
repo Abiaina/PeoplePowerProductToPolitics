@@ -123,7 +123,7 @@ for row in csv_f:
 
 outfile = open("./company_politics_details.csv", "wb")
 writer = csv.writer(outfile)
-writer.writerow(companyDetails)
+writer.writerow(json.dumps(companyDetails))
 
 outfile = open("./unfound_companies.csv", "wb")
 writer = csv.writer(outfile)
