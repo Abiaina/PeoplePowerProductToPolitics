@@ -17,7 +17,7 @@ for row in table.findAll('tr'):
     # going looking for a link tag in the row
     for cell in row.findAll('a'):
         # this is checking the link tag for any non ascii char
-        text = unidecode(cell.text)
+        text = unidecode(cell.text).strip()
         list_of_cells.append(text)
     if list_of_cells:
         list_of_rows.append(list_of_cells)

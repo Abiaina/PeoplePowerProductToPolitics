@@ -68,7 +68,7 @@ def get_summary_data(site, name, id):
         total_lobby_dollars = money[1].text
 
     data = {
-        "company_name": name,
+        "company_name": unidecode(name).strip(),
         "os_id": id,
         "most_lobbied_bill": most_lobbied_bill,
         "top_recipients": top_recipients,
