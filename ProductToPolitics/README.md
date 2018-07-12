@@ -43,10 +43,20 @@ beautiful soup
 csv
 requests
 axios
+untangle
 
-Api help:
+simulators:
+xde
+Genymotion
+download expo app for android/iOS
+
+
+pip install untangle
+
+OpenSecrets help:
 open secrets: apis@crp.org
 also ask questions in the group: opensecrets-open-data@googlegroups.com
+https://www.opensecrets.org/resources/datadictionary/UserGuide.pdf
 
 ## Updating to New Releases
 

@@ -9,10 +9,12 @@ export default class ProductDetails extends React.Component {
 //
   render() {
     return (
-      <View>
-        <Text>{this.props.barcode}</Text>
+      <View style={styles.container}>
+        <View>
+          <Text>{this.props.barcode}</Text>
+        </View>
         <Image
-         style={{width: 100, height: 100}}
+         style={styles.picture}
          source={{uri: 'https://pics.drugstore.com/prodimg/476553/900.jpg'}}
          />
       </View>
@@ -23,6 +25,12 @@ export default class ProductDetails extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'stretch',
+    justifyContent: 'center',
+  },
+  pic: {
+    flex: 0.5,
     backgroundColor: '#fff',
     alignItems: 'stretch',
     justifyContent: 'center',
