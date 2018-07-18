@@ -1,22 +1,44 @@
 import React from 'react';
+import axios from 'axios';
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
-// import { StyleSheet, Text, View } from 'react-native';
 
 export default class ProductDetails extends React.Component {
 
-//There should be a axios get request for the barcode api
-//
+  constructor(props) {
+      super(props);
+      this.state = {
+        productCompanyName: null,
+        parentCompanyName: null,
+        update: 'this is the initial value',
+        url: `https://api.upcitemdb.com/prod/trial/lookup?upc=${this.props.upc}`,
+        error: 'none',
+      };
+    }
+
+  componentDidMount = () => {
+    axios.post(this.state.url)
+    .then ((response) => {
+      this.setState({
+        productCompanyName: response,
+      })
+    })
+    .catch(() => {
+      this.setState({
+        error: 'Unable to find product info',
+      })
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
         <View>
-          <Text>{this.props.barcode}</Text>
+          <Text>This works</Text>
+          <Text>{this.props.productCompanyName}</Text>
+          <Text>{this.state.url}</Text>
+          <Text>Error: {this.state.error}</Text>
         </View>
-        <Image
-         style={styles.picture}
-         source={{uri: 'https://pics.drugstore.com/prodimg/476553/900.jpg'}}
-         />
       </View>
     );
   }

@@ -17,6 +17,7 @@ def get_summary_data(site, name, id):
     total_contribution_dollars = 0
     company_name = name
     os_id = id
+    subsidiaries = []
 
     scrape_response = requests.get(site)
     html = scrape_response.content
@@ -67,6 +68,31 @@ def get_summary_data(site, name, id):
         total_contribution_dollars = money[0].text.replace('$','').replace(',','')
         total_lobby_dollars = money[1].text.replace('$','').replace(',','')
 
+    site2 = 'https://www.opensecrets.org/orgs/totals.php?id=' + id
+
+    def get_summary_data(site):
+    subsidiaries = []
+
+    scrape_response = requests.get(site)
+    html = scrape_response.content
+
+    soup2 = BeautifulSoup(html)
+
+    # top recipients (remember to remove the last element in the array)
+    table2 = soup2.findAll("table", attrs={'class': 'datadisplay'})[1]
+
+    # this going row by row
+    for row in table2.findAll('tr'):
+        list_of_cells = []
+        # going looking for a link tag in the row
+        for cell in row2.findAll('td'):
+            # this is checking the link tag for any non ascii char
+            text2 = unidecode(cell2.text)
+            text2 = text.replace('&nbsp;', '')
+            list_of_cells2.append(text)
+        if list_of_cells:
+            subsidiaries.append(list_of_cells2[0])
+
     data = {
         "name": unidecode(name).strip(),
         "os_id": id,
@@ -75,6 +101,8 @@ def get_summary_data(site, name, id):
         "total_lobby_dollars": total_lobby_dollars,
         "total_contribution_dollars": total_contribution_dollars,
         "share_holder_politicians": share_holder_politicians,
+        'subsidiaries': subsidiaries,
+
     }
 
     return data

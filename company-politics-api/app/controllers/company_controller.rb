@@ -2,6 +2,7 @@ class CompanyController < ApplicationController
 
 # get request:
 #http://localhost:3000/company_details/company name
+# use '%20' for spaces
 
   def company_details
     company = Company.find_by name: params[:company]

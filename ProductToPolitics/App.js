@@ -11,6 +11,7 @@ export default class App extends React.Component {
       super();
       this.state = {
         scanBarcode: false,
+        companyName: 'PepsiCo',
       };
     }
 
@@ -34,7 +35,9 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        {(this.state.scanBarcode) ? <ScanContainer/> : this.scanButton() }
+
+        {(this.state.scanBarcode) ? <ProductDetails
+          upc={"028400090858"}/> : this.scanButton() }
       </View>
     );
   }
