@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_13_000345) do
+ActiveRecord::Schema.define(version: 2018_07_18_203856) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,9 @@ ActiveRecord::Schema.define(version: 2018_07_13_000345) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "most_lobbied_bill_id"
+    t.bigint "subsidiary_id"
     t.index ["most_lobbied_bill_id"], name: "index_companies_on_most_lobbied_bill_id"
+    t.index ["subsidiary_id"], name: "index_companies_on_subsidiary_id"
   end
 
   create_table "companies_share_holders", force: :cascade do |t|
@@ -48,6 +50,12 @@ ActiveRecord::Schema.define(version: 2018_07_13_000345) do
   end
 
   create_table "share_holders", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subsidiaries", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
