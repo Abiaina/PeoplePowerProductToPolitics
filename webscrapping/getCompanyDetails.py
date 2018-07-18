@@ -8,6 +8,30 @@ import untangle
 import config
 import urllib
 
+def get_subsidiary_data(id):
+    subsidiaries = []
+    site = 'https://www.opensecrets.org/orgs/totals.php?id='
+    scrape_response = requests.get(site + id)
+    html = scrape_response.content
+
+    soup = BeautifulSoup(html)
+
+    # top recipients (remember to remove the last element in the array)
+    if soup.findAll("table", attrs={'class': 'datadisplay'}):
+        info_table = soup.findAll("table", attrs={'class': 'datadisplay'})[-1]
+        if info_table.find('tr').find('th').text.lower() == "affiliate":
+            for row in info_table.findAll('tr'):
+                list_of_cells = []
+                # going looking for a link tag in the row
+                for cell in row.findAll('td'):
+                    # this is checking the link tag for any non ascii char
+                    text = unidecode(cell.text)
+                    text = text.replace('&nbsp;', '')
+                    list_of_cells.append(text)
+                if list_of_cells:
+                    subsidiaries.append(list_of_cells[0])
+
+        return subsidiaries
 
 def get_summary_data(site, name, id):
     most_lobbied_bill = ''
@@ -17,6 +41,7 @@ def get_summary_data(site, name, id):
     total_contribution_dollars = 0
     company_name = name
     os_id = id
+    subsidiaries = []
 
     scrape_response = requests.get(site)
     html = scrape_response.content
@@ -67,6 +92,8 @@ def get_summary_data(site, name, id):
         total_contribution_dollars = money[0].text.replace('$','').replace(',','')
         total_lobby_dollars = money[1].text.replace('$','').replace(',','')
 
+    subsidiaries = get_subsidiary_data(id)
+
     data = {
         "name": unidecode(name).strip(),
         "os_id": id,
@@ -75,10 +102,12 @@ def get_summary_data(site, name, id):
         "total_lobby_dollars": total_lobby_dollars,
         "total_contribution_dollars": total_contribution_dollars,
         "share_holder_politicians": share_holder_politicians,
+        "subsidiaries": subsidiaries,
     }
 
-    return data
-
+    outfile = open("./company_data.json", 'a')
+    json.dump(data, outfile, sort_keys = True, indent = 4,
+               ensure_ascii = False)
  ## get company name
 f = open('companies.csv')
 csv_f = csv.reader(f)
@@ -121,9 +150,6 @@ for row in csv_f:
  objSite = summaryUrl + id
  companyDetails.append(get_summary_data(objSite, row[0], id))
 
-outfile = open("./company_politics_details.csv", "wb")
-writer = csv.writer(outfile)
-writer.writerow(json.dumps(companyDetails))
 
 outfile = open("./unfound_companies.csv", "wb")
 writer = csv.writer(outfile)
