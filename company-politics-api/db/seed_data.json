@@ -1,658 +1,714 @@
 [
   {
-    "total_lobby_dollars": "300000",
-    "name": "Nestle SA",
-    "recipients": [
-      "DNC Services Corp",
-      "Obama, Barack",
-      "Ahn, Robert Lee",
-      "Baldwin, Tammy",
-      "Kotick, Michael",
-      "Fischer, Deb",
-      "Phoenix, Jess",
-      "Trump, Donald",
-      "Republican National Cmte",
-      "Jones, Doug"
-    ],
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1628 (American Health Care Act of 2017)",
+    "name": "Nestle SA",
     "os_id": "D000042332",
-    "share_holder_politicians": [
-      "Black, Diane (R-TN)",
-      "Capito, Shelley Moore (R-WV)",
-      "Collins, Susan M (R-ME)"
-    ],
-    "total_contribution_dollars": "43786"
-  },
-  {
-    "total_lobby_dollars": "1420000",
-    "name": "Philip Morris International",
     "recipients": [
-      "Pittenger, Robert",
-      "Stefanik, Elise",
-      "Smith, Chris"
+        "DNC Services Corp",
+        "Obama, Barack",
+        "Ahn, Robert Lee",
+        "Baldwin, Tammy",
+        "Kotick, Michael",
+        "Fischer, Deb",
+        "Phoenix, Jess",
+        "Trump, Donald",
+        "Republican National Cmte",
+        "Jones, Doug"
     ],
+    "share_holder_politicians": [
+        "Black, Diane (R-TN)",
+        "Capito, Shelley Moore (R-WV)",
+        "Collins, Susan M (R-ME)"
+    ],
+    "subsidiaries": [
+        "Nestle Purina PetCare",
+        "Nestle USA",
+        "Nestle Waters North America"
+    ],
+    "total_contribution_dollars": "43786",
+    "total_lobby_dollars": "300000"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1256 ()",
+    "name": "Philip Morris International",
     "os_id": "D000055403",
-    "share_holder_politicians": [
-      "Carper, Tom (D-DE)",
-      "Crowley, Joseph (D-NY)",
-      "Jones, Walter B Jr (R-NC)",
-      "Pallone, Frank Jr (D-NJ)"
-    ],
-    "total_contribution_dollars": "1250"
-  },
-  {
-    "total_lobby_dollars": "809671",
-    "name": "Procter & Gamble",
     "recipients": [
-      "Brown, Sherrod",
-      "Democratic Congressional Campaign Cmte",
-      "Democratic Senatorial Campaign Cmte",
-      "Pureval, Aftab",
-      "Democratic Party of Ohio",
-      "Ryan, Paul",
-      "Baldwin, Tammy",
-      "Gianforte, Greg",
-      "Feinstein, Dianne",
-      "Heitkamp, Heidi",
-      "Klobuchar, Amy"
+        "Pittenger, Robert",
+        "Stefanik, Elise",
+        "Smith, Chris"
     ],
+    "share_holder_politicians": [
+        "Carper, Tom (D-DE)",
+        "Crowley, Joseph (D-NY)",
+        "Jones, Walter B Jr (R-NC)",
+        "Pallone, Frank Jr (D-NJ)"
+    ],
+    "subsidiaries": [],
+    "total_contribution_dollars": "1250",
+    "total_lobby_dollars": "1420000"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.985 (Fairness in Class Action Litigation and Furthering Asbestos Claim Transparency Act of 2017)",
+    "name": "Procter & Gamble",
     "os_id": "D000000485",
-    "share_holder_politicians": [
-      "Brooks, Mo (R-AL)",
-      "Capito, Shelley Moore (R-WV)",
-      "Carper, Tom (D-DE)",
-      "Conaway, Mike (R-TX)",
-      "Connolly, Gerry (D-VA)",
-      "Cooper, Jim (D-TN)",
-      "Crowley, Joseph (D-NY)",
-      "Dingell, Debbie (D-MI)",
-      "Doggett, Lloyd (D-TX)",
-      "Foxx, Virginia (R-NC)",
-      "Frelinghuysen, Rodney (R-NJ)",
-      "Gibbs, Bob (R-OH)",
-      "Heck, Dennis (D-WA)",
-      "Hoeven, John (R-ND)"
-    ],
-    "total_contribution_dollars": "458886"
-  },
-  {
-    "total_lobby_dollars": "1470000",
-    "name": "PepsiCo",
     "recipients": [
-      "Democratic Senatorial Campaign Cmte",
-      "National Republican Senatorial Cmte",
-      "Hudson, Richard",
-      "Casey, Bob",
-      "Senate Majority PAC",
-      "Priorities USA Action",
-      "Democratic Congressional Campaign Cmte",
-      "Klobuchar, Amy",
-      "Democratic Party of Pennsylvania",
-      "Crowley, Joseph"
+        "Brown, Sherrod",
+        "Democratic Congressional Campaign Cmte",
+        "Democratic Senatorial Campaign Cmte",
+        "Pureval, Aftab",
+        "Democratic Party of Ohio",
+        "Ryan, Paul",
+        "Baldwin, Tammy",
+        "Gianforte, Greg",
+        "Feinstein, Dianne",
+        "Heitkamp, Heidi",
+        "Klobuchar, Amy"
     ],
+    "share_holder_politicians": [
+        "Brooks, Mo (R-AL)",
+        "Capito, Shelley Moore (R-WV)",
+        "Carper, Tom (D-DE)",
+        "Conaway, Mike (R-TX)",
+        "Connolly, Gerry (D-VA)",
+        "Cooper, Jim (D-TN)",
+        "Crowley, Joseph (D-NY)",
+        "Dingell, Debbie (D-MI)",
+        "Doggett, Lloyd (D-TX)",
+        "Foxx, Virginia (R-NC)",
+        "Frelinghuysen, Rodney (R-NJ)",
+        "Gibbs, Bob (R-OH)",
+        "Heck, Dennis (D-WA)",
+        "Hoeven, John (R-ND)"
+    ],
+    "subsidiaries": [
+        "Gillette Co"
+    ],
+    "total_contribution_dollars": "458886",
+    "total_lobby_dollars": "809671"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.764 (Veterans Education Priority Enrollment Act of 2017)",
+    "name": "PepsiCo",
     "os_id": "D000000200",
-    "share_holder_politicians": [
-      "Capito, Shelley Moore (R-WV)",
-      "Cohen, Steve (D-TN)",
-      "Collins, Susan M (R-ME)",
-      "Conaway, Mike (R-TX)",
-      "Dingell, Debbie (D-MI)",
-      "Foxx, Virginia (R-NC)",
-      "Frelinghuysen, Rodney (R-NJ)",
-      "Grijalva, Raul M (D-AZ)",
-      "Hoeven, John (R-ND)",
-      "Inhofe, James M (R-OK)"
-    ],
-    "total_contribution_dollars": "283860"
-  },
-  {
-    "total_lobby_dollars": "2100000",
-    "name": "Anheuser-Busch InBev",
     "recipients": [
-      "National Republican Senatorial Cmte",
-      "National Republican Congressional Cmte",
-      "Missouri Rising Action",
-      "Congressional Leadership Fund",
-      "Senate Leadership Fund",
-      "Democratic Congressional Campaign Cmte",
-      "Ryan, Paul",
-      "Smith, Jason",
-      "Wagner, Ann L",
-      "Democratic Senatorial Campaign Cmte"
+        "Democratic Senatorial Campaign Cmte",
+        "National Republican Senatorial Cmte",
+        "Hudson, Richard",
+        "Casey, Bob",
+        "Senate Majority PAC",
+        "Priorities USA Action",
+        "Democratic Congressional Campaign Cmte",
+        "Klobuchar, Amy",
+        "Democratic Party of Pennsylvania",
+        "Crowley, Joseph"
     ],
+    "share_holder_politicians": [
+        "Capito, Shelley Moore (R-WV)",
+        "Cohen, Steve (D-TN)",
+        "Collins, Susan M (R-ME)",
+        "Conaway, Mike (R-TX)",
+        "Dingell, Debbie (D-MI)",
+        "Foxx, Virginia (R-NC)",
+        "Frelinghuysen, Rodney (R-NJ)",
+        "Grijalva, Raul M (D-AZ)",
+        "Hoeven, John (R-ND)",
+        "Inhofe, James M (R-OK)"
+    ],
+    "subsidiaries": [
+        "Frito-Lay Inc",
+        "Pepsi Bottling",
+        "Quaker Oats",
+        "Tropicana Products"
+    ],
+    "total_contribution_dollars": "283860",
+    "total_lobby_dollars": "1470000"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.236 (Craft Beverage Modernization and Tax Reform Act of 2017)",
+    "name": "Anheuser-Busch InBev",
     "os_id": "D000042510",
-    "share_holder_politicians": [
-      "Gibbs, Bob (R-OH)",
-      "Hoeven, John (R-ND)",
-      "Whitehouse, Sheldon (D-RI)"
+    "recipients": [
+        "National Republican Senatorial Cmte",
+        "National Republican Congressional Cmte",
+        "Missouri Rising Action",
+        "Congressional Leadership Fund",
+        "Senate Leadership Fund",
+        "Democratic Congressional Campaign Cmte",
+        "Ryan, Paul",
+        "Smith, Jason",
+        "Wagner, Ann L",
+        "Democratic Senatorial Campaign Cmte"
     ],
-    "total_contribution_dollars": "1853861"
-  },
-  {
-    "total_lobby_dollars": "0",
+    "share_holder_politicians": [
+        "Gibbs, Bob (R-OH)",
+        "Hoeven, John (R-ND)",
+        "Whitehouse, Sheldon (D-RI)"
+    ],
+    "subsidiaries": [
+        "Anheuser-Busch",
+        "Budweiser Co",
+        "Busch Agricultural Resources",
+        "Metal Container Corp",
+        "Miller Brewing",
+        "MillerCoors LLC"
+    ],
+    "total_contribution_dollars": "1853861",
+    "total_lobby_dollars": "2100000"
+},
+{
+    "most_lobbied_bill": "",
     "name": "LVMH Moet Hennessy Louis Vuitton",
-    "recipients": [
-      "Warren, Elizabeth",
-      "VIEW ALL CANDIDATE RECIPIENTS"
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000042116",
-    "share_holder_politicians": [
-
+    "recipients": [
+        "Warren, Elizabeth",
+        "VIEW ALL CANDIDATE RECIPIENTS"
     ],
-    "total_contribution_dollars": "175"
-  },
-  {
-    "total_lobby_dollars": "212286",
+    "share_holder_politicians": [],
+    "subsidiaries": [
+        "Sephora USA"
+    ],
+    "total_contribution_dollars": "175",
+    "total_lobby_dollars": "0"
+},
+{
+    "most_lobbied_bill": "",
     "name": "Tyson Foods",
-    "recipients": [
-      "Democratic Senatorial Campaign Cmte",
-      "Democratic Congressional Campaign Cmte",
-      "Tester, Jon",
-      "Brown, Sherrod",
-      "Cotton, Tom",
-      "Womack, Steve",
-      "Conaway, Mike",
-      "Aguilar, Pete",
-      "Stabenow, Debbie",
-      "Strange, Luther"
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000000460",
-    "share_holder_politicians": [
-      "Carper, Tom (D-DE)",
-      "Schneider, Brad (D-IL)",
-      "Smith, Lamar (R-TX)"
+    "recipients": [
+        "Democratic Senatorial Campaign Cmte",
+        "Democratic Congressional Campaign Cmte",
+        "Tester, Jon",
+        "Brown, Sherrod",
+        "Cotton, Tom",
+        "Womack, Steve",
+        "Conaway, Mike",
+        "Aguilar, Pete",
+        "Stabenow, Debbie",
+        "Strange, Luther"
     ],
-    "total_contribution_dollars": "228049"
-  },
-  {
-    "total_lobby_dollars": "0",
+    "share_holder_politicians": [
+        "Carper, Tom (D-DE)",
+        "Schneider, Brad (D-IL)",
+        "Smith, Lamar (R-TX)"
+    ],
+    "subsidiaries": [
+        "Advance Food Co",
+        "Hillshire Brands Co",
+        "Tyson Fresh Meats"
+    ],
+    "total_contribution_dollars": "228049",
+    "total_lobby_dollars": "212286"
+},
+{
+    "most_lobbied_bill": "",
     "name": "L'Oreal",
-    "recipients": [
-      "Democratic Congressional Campaign Cmte",
-      "Committee to Defend the President",
-      "Delgado, Antonio",
-      "Baer, Lauren",
-      "Rittereiser, Jason",
-      "Gillibrand, Kirsten",
-      "Marts, Tola",
-      "Jones, Doug",
-      "Hashimi, Nadia",
-      "DNC Services Corp",
-      "Harris, Kamala D"
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000042704",
-    "share_holder_politicians": [
-
-    ],
-    "total_contribution_dollars": "6850"
-  },
-  {
-    "total_lobby_dollars": "220000",
-    "name": "Kraft Heinz",
     "recipients": [
-      "Aderholt, Robert B",
-      "Democratic Congressional Campaign Cmte",
-      "Democratic Senatorial Campaign Cmte",
-      "National Republican Congressional Cmte",
-      "National Republican Senatorial Cmte",
-      "Casey, Bob",
-      "Dingell, Debbie",
-      "Long, Billy",
-      "Davis, Danny K",
-      "Davis, Rodney",
-      "Hoyer, Steny H",
-      "Klobuchar, Amy",
-      "McCarthy, Kevin",
-      "McConnell, Mitch",
-      "Sessions, Pete"
+        "Democratic Congressional Campaign Cmte",
+        "Committee to Defend the President",
+        "Delgado, Antonio",
+        "Baer, Lauren",
+        "Rittereiser, Jason",
+        "Gillibrand, Kirsten",
+        "Marts, Tola",
+        "Jones, Doug",
+        "Hashimi, Nadia",
+        "DNC Services Corp",
+        "Harris, Kamala D"
     ],
+    "share_holder_politicians": [],
+    "subsidiaries": [],
+    "total_contribution_dollars": "6850",
+    "total_lobby_dollars": "0"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1296 ()",
+    "name": "Kraft Heinz",
     "os_id": "D000067808",
-    "share_holder_politicians": [
-      "Blunt, Roy (R-MO)",
-      "Comstock, Barbara (R-VA)",
-      "Frelinghuysen, Rodney (R-NJ)"
+    "recipients": [
+        "Aderholt, Robert B",
+        "Democratic Congressional Campaign Cmte",
+        "Democratic Senatorial Campaign Cmte",
+        "National Republican Congressional Cmte",
+        "National Republican Senatorial Cmte",
+        "Casey, Bob",
+        "Dingell, Debbie",
+        "Long, Billy",
+        "Davis, Danny K",
+        "Davis, Rodney",
+        "Hoyer, Steny H",
+        "Klobuchar, Amy",
+        "McCarthy, Kevin",
+        "McConnell, Mitch",
+        "Sessions, Pete"
     ],
-    "total_contribution_dollars": "75470"
-  },
-  {
-    "total_lobby_dollars": "200000",
+    "share_holder_politicians": [
+        "Blunt, Roy (R-MO)",
+        "Comstock, Barbara (R-VA)",
+        "Frelinghuysen, Rodney (R-NJ)"
+    ],
+    "subsidiaries": [],
+    "total_contribution_dollars": "75470",
+    "total_lobby_dollars": "220000"
+},
+{
+    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1 (Tax Cuts and Jobs Act)",
     "name": "Mondelez International",
-    "recipients": [
-      "Hollingsworth, Trey",
-      "Tester, Jon",
-      "Blumenauer, Earl",
-      "Brady, Kevin",
-      "Gillibrand, Kirsten",
-      "Hatch, Orrin G",
-      "Isakson, Johnny",
-      "McEachin, Donald",
-      "Menendez, Robert",
-      "Young, Todd"
-    ],
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1 (Tax Cuts and Jobs Act)",
     "os_id": "D000067057",
-    "share_holder_politicians": [
-      "Capito, Shelley Moore (R-WV)",
-      "Comstock, Barbara (R-VA)",
-      "Conaway, Mike (R-TX)",
-      "Dingell, Debbie (D-MI)",
-      "Gibbs, Bob (R-OH)",
-      "Hoeven, John (R-ND)"
-    ],
-    "total_contribution_dollars": "14729"
-  },
-  {
-    "total_lobby_dollars": "2290000",
-    "name": "Altria Group",
     "recipients": [
-      "National Republican Congressional Cmte",
-      "Congressional Leadership Fund",
-      "McCarthy, Kevin",
-      "Kaine, Tim",
-      "Majority Cmte PAC",
-      "Democratic Senatorial Campaign Cmte",
-      "National Republican Senatorial Cmte",
-      "Great America Cmte",
-      "Senate Leadership Fund",
-      "AG America"
+        "Hollingsworth, Trey",
+        "Tester, Jon",
+        "Blumenauer, Earl",
+        "Brady, Kevin",
+        "Gillibrand, Kirsten",
+        "Hatch, Orrin G",
+        "Isakson, Johnny",
+        "McEachin, Donald",
+        "Menendez, Robert",
+        "Young, Todd"
     ],
+    "share_holder_politicians": [
+        "Capito, Shelley Moore (R-WV)",
+        "Comstock, Barbara (R-VA)",
+        "Conaway, Mike (R-TX)",
+        "Dingell, Debbie (D-MI)",
+        "Gibbs, Bob (R-OH)",
+        "Hoeven, John (R-ND)"
+    ],
+    "subsidiaries": [],
+    "total_contribution_dollars": "14729",
+    "total_lobby_dollars": "200000"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1136 (FDA Deeming Authority Clarification Act of 2017)",
+    "name": "Altria Group",
     "os_id": "D000000067",
-    "share_holder_politicians": [
-      "Blunt, Roy (R-MO)",
-      "Carper, Tom (D-DE)",
-      "Crowley, Joseph (D-NY)",
-      "Frelinghuysen, Rodney (R-NJ)"
+    "recipients": [
+        "National Republican Congressional Cmte",
+        "Congressional Leadership Fund",
+        "McCarthy, Kevin",
+        "Kaine, Tim",
+        "Majority Cmte PAC",
+        "Democratic Senatorial Campaign Cmte",
+        "National Republican Senatorial Cmte",
+        "Great America Cmte",
+        "Senate Leadership Fund",
+        "AG America"
     ],
-    "total_contribution_dollars": "1447158"
-  },
-  {
-    "total_lobby_dollars": "50000",
+    "share_holder_politicians": [
+        "Blunt, Roy (R-MO)",
+        "Carper, Tom (D-DE)",
+        "Crowley, Joseph (D-NY)",
+        "Frelinghuysen, Rodney (R-NJ)"
+    ],
+    "subsidiaries": [
+        "Altria Client Services",
+        "Altria Corporate Services",
+        "Philip Morris USA",
+        "Ste Michelle Wine Estates",
+        "US Smokeless Tobacco"
+    ],
+    "total_contribution_dollars": "1447158",
+    "total_lobby_dollars": "2290000"
+},
+{
+    "most_lobbied_bill": "",
     "name": "Danone",
-    "recipients": [
-      "Kuster, Ann Mclane",
-      "Tester, Jon",
-      "Bennet, Michael F",
-      "Hassan, Maggie",
-      "Heinrich, Martin",
-      "Common Sense Colorado",
-      "Pappas, Chris",
-      "Democratic Party of New Hampshire",
-      "Heckroth, Thomas",
-      "Panetta, Jimmy",
-      "Salerno, Lillian"
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000042446",
-    "share_holder_politicians": [
-
+    "recipients": [
+        "Kuster, Ann Mclane",
+        "Tester, Jon",
+        "Bennet, Michael F",
+        "Hassan, Maggie",
+        "Heinrich, Martin",
+        "Common Sense Colorado",
+        "Pappas, Chris",
+        "Democratic Party of New Hampshire",
+        "Heckroth, Thomas",
+        "Panetta, Jimmy",
+        "Salerno, Lillian"
     ],
-    "total_contribution_dollars": "23025"
-  },
-  {
-    "total_lobby_dollars": "10000",
+    "share_holder_politicians": [],
+    "subsidiaries": [
+        "DanoneWave",
+        "Stonyfield Farm"
+    ],
+    "total_contribution_dollars": "23025",
+    "total_lobby_dollars": "50000"
+},
+{
+    "most_lobbied_bill": "",
     "name": "Adidas AG",
-    "recipients": [
-      "Koh, Dan",
-      "Brown, Sherrod",
-      "Lamb, Conor",
-      "Warren, Elizabeth"
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000042006",
-    "share_holder_politicians": [
-
-    ],
-    "total_contribution_dollars": "4450"
-  },
-  {
-    "total_lobby_dollars": "230000",
-    "name": "General Mills",
     "recipients": [
-      "Klobuchar, Amy",
-      "Phillips, Dean",
-      "Brown, Sherrod",
-      "Smith, Tina",
-      "Conaway, Mike",
-      "Democratic Senatorial Campaign Cmte",
-      "Woodall, Rob",
-      "Yoder, Kevin",
-      "Feehan, Daniel",
-      "Davis, Rodney",
-      "Kinzinger, Adam",
-      "Peterson, Collin",
-      "Scott, David"
+        "Koh, Dan",
+        "Brown, Sherrod",
+        "Lamb, Conor",
+        "Warren, Elizabeth"
     ],
+    "share_holder_politicians": [],
+    "subsidiaries": [
+        "Reebok International"
+    ],
+    "total_contribution_dollars": "4450",
+    "total_lobby_dollars": "10000"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.1609 (Energy and Water Development and Related Agencies Appropriations Act, 2018)",
+    "name": "General Mills",
     "os_id": "D000000467",
-    "share_holder_politicians": [
-      "Capito, Shelley Moore (R-WV)",
-      "Frankel, Lois J (D-FL)",
-      "Hoeven, John (R-ND)"
-    ],
-    "total_contribution_dollars": "116987"
-  },
-  {
-    "total_lobby_dollars": "590000",
-    "name": "Diageo PLC",
     "recipients": [
-      "Democratic Congressional Campaign Cmte",
-      "Gillibrand, Kirsten",
-      "Maloney, Sean Patrick",
-      "Barletta, Lou",
-      "BRIDGE PAC",
-      "Sanchez, Linda",
-      "Richmond, Cedric",
-      "ROSKAM PAC",
-      "Paulsen, Erik",
-      "Holding, George"
+        "Klobuchar, Amy",
+        "Phillips, Dean",
+        "Brown, Sherrod",
+        "Smith, Tina",
+        "Conaway, Mike",
+        "Democratic Senatorial Campaign Cmte",
+        "Woodall, Rob",
+        "Yoder, Kevin",
+        "Feehan, Daniel",
+        "Davis, Rodney",
+        "Kinzinger, Adam",
+        "Peterson, Collin",
+        "Scott, David"
     ],
+    "share_holder_politicians": [
+        "Capito, Shelley Moore (R-WV)",
+        "Frankel, Lois J (D-FL)",
+        "Hoeven, John (R-ND)"
+    ],
+    "subsidiaries": [
+        "Pillsbury Co"
+    ],
+    "total_contribution_dollars": "116987",
+    "total_lobby_dollars": "230000"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.3358 (Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2018)",
+    "name": "Diageo PLC",
     "os_id": "D000025490",
-    "share_holder_politicians": [
-      "Black, Diane (R-TN)",
-      "Hoeven, John (R-ND)"
+    "recipients": [
+        "Democratic Congressional Campaign Cmte",
+        "Gillibrand, Kirsten",
+        "Maloney, Sean Patrick",
+        "Barletta, Lou",
+        "BRIDGE PAC",
+        "Sanchez, Linda",
+        "Richmond, Cedric",
+        "ROSKAM PAC",
+        "Paulsen, Erik",
+        "Holding, George"
     ],
-    "total_contribution_dollars": "78467"
-  },
-  {
-    "total_lobby_dollars": 0,
+    "share_holder_politicians": [
+        "Black, Diane (R-TN)",
+        "Hoeven, John (R-ND)"
+    ],
+    "subsidiaries": [
+        "Diageo North America"
+    ],
+    "total_contribution_dollars": "78467",
+    "total_lobby_dollars": "590000"
+},
+{
+    "most_lobbied_bill": "",
     "name": "AB Electrolux",
-    "recipients": [
-
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000046216",
-    "share_holder_politicians": [
-
-    ],
-    "total_contribution_dollars": 0
-  },
-  {
-    "total_lobby_dollars": "0",
+    "recipients": [],
+    "share_holder_politicians": [],
+    "subsidiaries": [],
+    "total_contribution_dollars": 0,
+    "total_lobby_dollars": 0
+},
+{
+    "most_lobbied_bill": "",
     "name": "Newell Brands",
-    "recipients": [
-      "Pureval, Aftab",
-      "ActBlue Non-Federal",
-      "Abel, Kevin",
-      "Gray, Bob",
-      "Hill, French",
-      "Ossoff, Jon",
-      "Democratic Congressional Campaign Cmte",
-      "Jones, Doug",
-      "Harris, Kamala D",
-      "Gillibrand, Kirsten"
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000042727",
-    "share_holder_politicians": [
-      "Jayapal, Pramila (D-WA)",
-      "Sensenbrenner, F James Jr (R-WI)"
+    "recipients": [
+        "Pureval, Aftab",
+        "ActBlue Non-Federal",
+        "Abel, Kevin",
+        "Gray, Bob",
+        "Hill, French",
+        "Ossoff, Jon",
+        "Democratic Congressional Campaign Cmte",
+        "Jones, Doug",
+        "Harris, Kamala D",
+        "Gillibrand, Kirsten"
     ],
-    "total_contribution_dollars": "4504"
-  },
-  {
-    "total_lobby_dollars": 0,
+    "share_holder_politicians": [
+        "Jayapal, Pramila (D-WA)",
+        "Sensenbrenner, F James Jr (R-WI)"
+    ],
+    "subsidiaries": [],
+    "total_contribution_dollars": "4504",
+    "total_lobby_dollars": "0"
+},
+{
+    "most_lobbied_bill": "",
     "name": "Kering",
-    "recipients": [
-
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000055436",
-    "share_holder_politicians": [
-
-    ],
-    "total_contribution_dollars": 0
-  },
-  {
-    "total_lobby_dollars": "0",
+    "recipients": [],
+    "share_holder_politicians": [],
+    "subsidiaries": [],
+    "total_contribution_dollars": 0,
+    "total_lobby_dollars": 0
+},
+{
+    "most_lobbied_bill": "",
     "name": "Conagra Brands",
-    "recipients": [
-      "Harris, Andy",
-      "Young, David",
-      "Aderholt, Robert B",
-      "Bacon, Donald John",
-      "Yoder, Kevin",
-      "Fischer, Deb",
-      "Bishop, Sanford",
-      "Conaway, Mike",
-      "Foxx, Virginia",
-      "Kuster, Ann Mclane",
-      "McConnell, Mitch",
-      "Republican Party of Nebraska",
-      "Womack, Steve"
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000000242",
-    "share_holder_politicians": [
-
-    ],
-    "total_contribution_dollars": "24531"
-  },
-  {
-    "total_lobby_dollars": "630000",
-    "name": "Stanley Black & Decker",
     "recipients": [
-      "Scalise, Steve",
-      "Brooks, Susan",
-      "Esty, Elizabeth",
-      "Hartzler, Vicky",
-      "Kustoff, David",
-      "Latta, Robert E",
-      "Schrader, Kurt",
-      "Scott, Tim",
-      "Jones, Doug",
-      "Keady, Jim"
+        "Harris, Andy",
+        "Young, David",
+        "Aderholt, Robert B",
+        "Bacon, Donald John",
+        "Yoder, Kevin",
+        "Fischer, Deb",
+        "Bishop, Sanford",
+        "Conaway, Mike",
+        "Foxx, Virginia",
+        "Kuster, Ann Mclane",
+        "McConnell, Mitch",
+        "Republican Party of Nebraska",
+        "Womack, Steve"
     ],
+    "share_holder_politicians": [],
+    "subsidiaries": [],
+    "total_contribution_dollars": "24531",
+    "total_lobby_dollars": "0"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.617 (Lower Farmington River and Salmon Brook Wild and Scenic River Act)",
+    "name": "Stanley Black & Decker",
     "os_id": "D000057143",
-    "share_holder_politicians": [
-      "Dingell, Debbie (D-MI)",
-      "Kelly, Mike (R-PA)",
-      "Price, David (D-NC)"
-    ],
-    "total_contribution_dollars": "9520"
-  },
-  {
-    "total_lobby_dollars": "100000",
-    "name": "Estee Lauder Companies",
     "recipients": [
-      "National Republican Congressional Cmte",
-      "Forward Majority Action Super PAC",
-      "Feinstein, Dianne",
-      "Gillibrand, Kirsten",
-      "Klobuchar, Amy",
-      "Crowley, Joseph",
-      "Casey, Bob",
-      "Kaine, Tim",
-      "Maloney, Carolyn B",
-      "Maloney, Sean Patrick",
-      "Nadler, Jerrold",
-      "Rice, Kathleen"
+        "Scalise, Steve",
+        "Brooks, Susan",
+        "Esty, Elizabeth",
+        "Hartzler, Vicky",
+        "Kustoff, David",
+        "Latta, Robert E",
+        "Schrader, Kurt",
+        "Scott, Tim",
+        "Jones, Doug",
+        "Keady, Jim"
     ],
+    "share_holder_politicians": [
+        "Dingell, Debbie (D-MI)",
+        "Kelly, Mike (R-PA)",
+        "Price, David (D-NC)"
+    ],
+    "subsidiaries": [],
+    "total_contribution_dollars": "9520",
+    "total_lobby_dollars": "630000"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.1113 (Personal Care Products Safety Act)",
+    "name": "Estee Lauder Companies",
     "os_id": "D000000468",
-    "share_holder_politicians": [
-      "Hoeven, John (R-ND)",
-      "Rogers, Hal (R-KY)",
-      "Whitehouse, Sheldon (D-RI)"
+    "recipients": [
+        "National Republican Congressional Cmte",
+        "Forward Majority Action Super PAC",
+        "Feinstein, Dianne",
+        "Gillibrand, Kirsten",
+        "Klobuchar, Amy",
+        "Crowley, Joseph",
+        "Casey, Bob",
+        "Kaine, Tim",
+        "Maloney, Carolyn B",
+        "Maloney, Sean Patrick",
+        "Nadler, Jerrold",
+        "Rice, Kathleen"
     ],
-    "total_contribution_dollars": "347309"
-  },
-  {
-    "total_lobby_dollars": "190000",
+    "share_holder_politicians": [
+        "Hoeven, John (R-ND)",
+        "Rogers, Hal (R-KY)",
+        "Whitehouse, Sheldon (D-RI)"
+    ],
+    "subsidiaries": [
+        "Aveda Corp",
+        "Clinique"
+    ],
+    "total_contribution_dollars": "347309",
+    "total_lobby_dollars": "100000"
+},
+{
+    "most_lobbied_bill": "",
     "name": "Hormel Foods",
-    "recipients": [
-      "Klobuchar, Amy",
-      "Republican National Cmte",
-      "Harris, Kamala D",
-      "Cruz, Ted",
-      "Trump, Donald",
-      "Jones, Doug",
-      "Murphy, Christopher S",
-      "Warren, Elizabeth"
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000026518",
-    "share_holder_politicians": [
-      "McKinley, David (R-WV)"
-    ],
-    "total_contribution_dollars": "3046"
-  },
-  {
-    "total_lobby_dollars": "480000",
-    "name": "Pernod Ricard",
     "recipients": [
-      "Great America Cmte",
-      "Brady, Kevin",
-      "Cassidy, Bill",
-      "Big Sky Opportunity PAC",
-      "Feinstein, Dianne",
-      "Heitkamp, Heidi",
-      "Hill, French",
-      "Latta, Robert E",
-      "Rodgers, Cathy McMorris",
-      "Suozzi, Tom"
+        "Klobuchar, Amy",
+        "Republican National Cmte",
+        "Harris, Kamala D",
+        "Cruz, Ted",
+        "Trump, Donald",
+        "Jones, Doug",
+        "Murphy, Christopher S",
+        "Warren, Elizabeth"
     ],
+    "share_holder_politicians": [
+        "McKinley, David (R-WV)"
+    ],
+    "subsidiaries": [],
+    "total_contribution_dollars": "3046",
+    "total_lobby_dollars": "190000"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1450 (No Stolen Trademarks Honored in America Act)",
+    "name": "Pernod Ricard",
     "os_id": "D000042306",
-    "share_holder_politicians": [
-
-    ],
-    "total_contribution_dollars": "15625"
-  },
-  {
-    "total_lobby_dollars": "140000",
-    "name": "Constellation Brands",
     "recipients": [
-      "Reed, Tom",
-      "Morelle, Joseph D",
-      "Crowley, Joseph",
-      "McCarthy, Kevin",
-      "Cornyn, John",
-      "National Republican Congressional Cmte",
-      "Heitkamp, Heidi",
-      "Roskam, Peter",
-      "Majority Cmte PAC",
-      "Feinstein, Dianne"
+        "Great America Cmte",
+        "Brady, Kevin",
+        "Cassidy, Bill",
+        "Big Sky Opportunity PAC",
+        "Feinstein, Dianne",
+        "Heitkamp, Heidi",
+        "Hill, French",
+        "Latta, Robert E",
+        "Rodgers, Cathy McMorris",
+        "Suozzi, Tom"
     ],
+    "share_holder_politicians": [],
+    "subsidiaries": [
+        "Pernod Ricard USA"
+    ],
+    "total_contribution_dollars": "15625",
+    "total_lobby_dollars": "480000"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1 (Tax Cuts and Jobs Act)",
+    "name": "Constellation Brands",
     "os_id": "D000025112",
-    "share_holder_politicians": [
-      "MacArthur, Thomas (R-NJ)",
-      "Renacci, Jim (R-OH)"
+    "recipients": [
+        "Reed, Tom",
+        "Morelle, Joseph D",
+        "Crowley, Joseph",
+        "McCarthy, Kevin",
+        "Cornyn, John",
+        "National Republican Congressional Cmte",
+        "Heitkamp, Heidi",
+        "Roskam, Peter",
+        "Majority Cmte PAC",
+        "Feinstein, Dianne"
     ],
-    "total_contribution_dollars": "253005"
-  },
-  {
-    "total_lobby_dollars": "0",
+    "share_holder_politicians": [
+        "MacArthur, Thomas (R-NJ)",
+        "Renacci, Jim (R-OH)"
+    ],
+    "subsidiaries": [
+        "Ravenswood Winery",
+        "Robert Mondavi Winery"
+    ],
+    "total_contribution_dollars": "253005",
+    "total_lobby_dollars": "140000"
+},
+{
+    "most_lobbied_bill": "",
     "name": "Dr Pepper Snapple Group",
-    "recipients": [
-      "Cleaver, Emanuel",
-      "Hartzler, Vicky",
-      "Taylor, Van",
-      "Estes, Ron",
-      "Comstock, Barbara",
-      "Cruz, Ted",
-      "Lankford, James",
-      "Long, Billy",
-      "Ryan, Paul",
-      "Sessions, Pete",
-      "Yoder, Kevin"
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000042050",
-    "share_holder_politicians": [
-      "Kelly, Mike (R-PA)",
-      "Rosen, Jacky (D-NV)"
-    ],
-    "total_contribution_dollars": "131677"
-  },
-  {
-    "total_lobby_dollars": "140000",
-    "name": "Hanesbrands",
     "recipients": [
-      "Democratic Congressional Campaign Cmte",
-      "Jones, Doug",
-      "DNC Services Corp",
-      "Lewis, John"
+        "Cleaver, Emanuel",
+        "Hartzler, Vicky",
+        "Taylor, Van",
+        "Estes, Ron",
+        "Comstock, Barbara",
+        "Cruz, Ted",
+        "Lankford, James",
+        "Long, Billy",
+        "Ryan, Paul",
+        "Sessions, Pete",
+        "Yoder, Kevin"
     ],
+    "share_holder_politicians": [
+        "Kelly, Mike (R-PA)",
+        "Rosen, Jacky (D-NV)"
+    ],
+    "subsidiaries": [],
+    "total_contribution_dollars": "131677",
+    "total_lobby_dollars": "0"
+},
+{
     "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.1631 (Department of State Authorities Act, Fiscal Year 2018)",
+    "name": "Hanesbrands",
     "os_id": "D000041306",
-    "share_holder_politicians": [
-      "Carper, Tom (D-DE)",
-      "Conaway, Mike (R-TX)",
-      "Smith, Lamar (R-TX)"
+    "recipients": [
+        "Democratic Congressional Campaign Cmte",
+        "Jones, Doug",
+        "DNC Services Corp",
+        "Lewis, John"
     ],
-    "total_contribution_dollars": "88"
-  },
-  {
-    "total_lobby_dollars": "0",
+    "share_holder_politicians": [
+        "Carper, Tom (D-DE)",
+        "Conaway, Mike (R-TX)",
+        "Smith, Lamar (R-TX)"
+    ],
+    "subsidiaries": [],
+    "total_contribution_dollars": "88",
+    "total_lobby_dollars": "140000"
+},
+{
+    "most_lobbied_bill": "",
     "name": "Avon Products",
-    "recipients": [
-      "Democratic Congressional Campaign Cmte",
-      "Donovan, Dan",
-      "Rose, Max",
-      "Gillibrand, Kirsten",
-      "DNC Services Corp",
-      "Jayapal, Pramila",
-      "Schrier, Kim",
-      "Jones, Doug",
-      "Bryce, Randy",
-      "Franken, Al"
-    ],
-    "most_lobbied_bill": "",
     "os_id": "D000024214",
-    "share_holder_politicians": [
-      "Brooks, Mo (R-AL)",
-      "Perdue, David (R-GA)"
-    ],
-    "total_contribution_dollars": "5315"
-  },
-  {
-    "total_lobby_dollars": "0",
-    "name": "Electronic Arts",
     "recipients": [
-      "Jones, Doug",
-      "Warren, Elizabeth",
-      "McGrath, Amy",
-      "Democratic Congressional Campaign Cmte"
+        "Democratic Congressional Campaign Cmte",
+        "Donovan, Dan",
+        "Rose, Max",
+        "Gillibrand, Kirsten",
+        "DNC Services Corp",
+        "Jayapal, Pramila",
+        "Schrier, Kim",
+        "Jones, Doug",
+        "Bryce, Randy",
+        "Franken, Al"
     ],
+    "share_holder_politicians": [
+        "Brooks, Mo (R-AL)",
+        "Perdue, David (R-GA)"
+    ],
+    "subsidiaries": [],
+    "total_contribution_dollars": "5315",
+    "total_lobby_dollars": "0"
+},
+{
     "most_lobbied_bill": "",
+    "name": "Electronic Arts",
     "os_id": "D000033404",
-    "share_holder_politicians": [
-      "Speier, Jackie (D-CA)"
-    ],
-    "total_contribution_dollars": "311"
-  },
-  {
-    "total_lobby_dollars": "300000",
-    "name": "Brown-Forman",
     "recipients": [
-      "DNC Services Corp",
-      "Republican Party of Kentucky",
-      "Kentucky State Dem Central Exec Cmte",
-      "Gray, Jim",
-      "Barr, Andy",
-      "Kaine, Tim",
-      "Glisson, Vickie",
-      "Republican National Cmte",
-      "Democratic Party of Virginia",
-      "Bluegrass Cmte"
+        "Jones, Doug",
+        "Warren, Elizabeth",
+        "McGrath, Amy",
+        "Democratic Congressional Campaign Cmte"
     ],
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.644 (Conscience Protection Act of 2017)",
-    "os_id": "D000000305",
     "share_holder_politicians": [
-
+        "Speier, Jackie (D-CA)"
     ],
-    "total_contribution_dollars": "337504"
-  }
+    "subsidiaries": [],
+    "total_contribution_dollars": "311",
+    "total_lobby_dollars": "0"
+},
+{
+    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.644 (Conscience Protection Act of 2017)",
+    "name": "Brown-Forman",
+    "os_id": "D000000305",
+    "recipients": [
+        "DNC Services Corp",
+        "Republican Party of Kentucky",
+        "Kentucky State Dem Central Exec Cmte",
+        "Gray, Jim",
+        "Barr, Andy",
+        "Kaine, Tim",
+        "Glisson, Vickie",
+        "Republican National Cmte",
+        "Democratic Party of Virginia",
+        "Bluegrass Cmte"
+    ],
+    "share_holder_politicians": [],
+    "subsidiaries": [
+        "Fetzer Vineyards"
+    ],
+    "total_contribution_dollars": "337504",
+    "total_lobby_dollars": "300000"
+}
 ]

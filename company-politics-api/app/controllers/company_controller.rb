@@ -7,6 +7,11 @@ class CompanyController < ApplicationController
   def company_details
     company = Company.find_by name: params[:company]
 
+    if !company
+      # is it the company or company id then find it by the company id???
+      company = Subsidiary.find_by name: params[:company].company
+    end
+    
     if company
       render json: {
         company_name: company.name,
@@ -15,6 +20,7 @@ class CompanyController < ApplicationController
         company_share_holders: company.share_holders,
         most_lobbied_bill: company.most_lobbied_bill,
         top_recipients: company.top_recipients,
+        subsidiaries: company.subsidairies,
       },
       status: :ok
     else
