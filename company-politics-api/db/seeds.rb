@@ -1,6 +1,12 @@
 require 'json'
 json_data = JSON.parse(File.read('db/seed_data.json'))
 
+Company.destroy_all
+ShareHolder.destroy_all
+MostLobbiedBill.destroy_all
+TopRecipient.destroy_all
+Subsidiary.destroy_all
+  puts "    Removed all previsious records"
 json_data.each do |json|
   name = json["name"]
   lobbying_dollars = json["total_lobby_dollars"]
@@ -14,6 +20,8 @@ json_data.each do |json|
   bill = MostLobbiedBill.find_by name: most_lobbied_bill
   if !bill
     bill = MostLobbiedBill.create!({ :name => most_lobbied_bill, :description => ""})
+    puts "    new bill #{bill.name}"
+
   end
 
   company = Company.create!({
@@ -33,26 +41,33 @@ json_data.each do |json|
       puts "  Created politician #{politician.name}"
     end
     company.share_holders << politician
+    puts "    new politician associations #{company.name} : #{politician.name}"
+
   end
 
   top_recipients.each do |t_recipient|
     taker = TopRecipient.find_by name: t_recipient
     if !taker
       taker = TopRecipient.create({ :name => t_recipient })
+      puts "  Created TopRecipient #{TopRecipient.name}"
     end
     company.top_recipients << taker
+    puts "    new company associations #{company.name} : #{taker.name}"
   end
 
   subsidiaries.each do |subsidiary|
     sub = Subsidiary.find_by name: subsidiary
     if !sub
       sub = Subsidiary.create({ :name => subsidiary })
+      puts "  Created subsidiary #{subsidiary.name}"
     else
       puts "WARNING: duplicate subsidiary #{sub.name} for #{sub.company.name} and #{company.name}"
     end
     company.subsidiaries << sub
+    puts "    new company associations #{company.name} : #{sub.name}"
 
   end
 
   company.save!
+  puts "    saved seed file"
 end
