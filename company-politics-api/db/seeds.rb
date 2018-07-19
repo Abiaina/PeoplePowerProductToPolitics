@@ -7,6 +7,7 @@ MostLobbiedBill.destroy_all
 TopRecipient.destroy_all
 Subsidiary.destroy_all
   puts "    Removed all previsious records"
+
 json_data.each do |json|
   name = json["name"]
   lobbying_dollars = json["total_lobby_dollars"]
@@ -59,7 +60,7 @@ json_data.each do |json|
     sub = Subsidiary.find_by name: subsidiary
     if !sub
       sub = Subsidiary.create({ :name => subsidiary })
-      puts "  Created subsidiary #{subsidiary.name}"
+      puts "  Created subsidiary #{sub.name}"
     else
       puts "WARNING: duplicate subsidiary #{sub.name} for #{sub.company.name} and #{company.name}"
     end

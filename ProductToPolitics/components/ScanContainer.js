@@ -8,16 +8,11 @@ import { BarCodeScanner, Permissions } from 'expo';
 export default class ScanContainer extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      barcodeData: null
-    };
     this.handleOnBarCodeRead = this.handleOnBarCodeRead.bind(this);
   }
 
   handleOnBarCodeRead(data) {
-    this.setState({
-      barcodeData: data.data
-    });
+    this.props.onBarcodeScan(data);
   }
 
   showScanScanner() {
@@ -28,19 +23,10 @@ export default class ScanContainer extends React.Component {
     )
   }
 
-  showProduct() {
-    return (
-      <ProductDetails
-        barcode={this.state.barcodeData}
-      />
-    )
-  }
-
   render() {
     return (
       <View style={StyleSheet.absoluteFill}>
-        {(this.state.barcodeData) ? this.showProduct() :
-        this.showScanScanner()}
+        {this.showScanScanner()}
       </View>
     );
   }

@@ -11,21 +11,22 @@ export default class ProductDetails extends React.Component {
         productCompanyName: null,
         parentCompanyName: null,
         update: 'this is the initial value',
-        url: `https://api.upcitemdb.com/prod/trial/lookup?upc=${this.props.upc}`,
-        error: 'none',
+        url: `https://p4api.herokuapp.com/company_details/Nestle%20SA`,
+        status: 'none',
       };
     }
 
   componentDidMount = () => {
-    axios.post(this.state.url)
+    axios.get(this.state.url)
     .then ((response) => {
       this.setState({
-        productCompanyName: response,
+        productCompanyName: response.data.company_name,
+        status: 'Complete'
       })
     })
-    .catch(() => {
+    .catch((error) => {
       this.setState({
-        error: 'Unable to find product info',
+        status: error,
       })
     });
   }
@@ -33,12 +34,8 @@ export default class ProductDetails extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <View>
-          <Text>This works</Text>
-          <Text>{this.props.productCompanyName}</Text>
-          <Text>{this.state.url}</Text>
-          <Text>Error: {this.state.error}</Text>
-        </View>
+          <Text>{this.state.productCompanyName}</Text>
+          <Text>Error: {this.state.status}</Text>
       </View>
     );
   }

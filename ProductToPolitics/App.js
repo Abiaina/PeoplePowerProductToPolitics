@@ -11,14 +11,16 @@ export default class App extends React.Component {
       super();
       this.state = {
         scanBarcode: false,
-        companyName: 'PepsiCo',
+        barcodeData: null,
       };
+      this.handleOnBarcodeScan = this.handleOnBarcodeScan.bind(this);
     }
 
   toggleState = () => {
     this.setState({
-        scanBarcode: !this.state.scanBarcode
-      });
+      scanBarcode: !this.state.scanBarcode,
+      barcodeData: null,
+    });
   }
 
   scanButton () {
@@ -31,13 +33,38 @@ export default class App extends React.Component {
     )
   }
 
+  showProduct() {
+    return (
+      <View>
+      <ProductDetails
+        barcode={this.state.barcodeData}
+      />
+      {this.scanButton()}
+      </View>
+    )
+  }
+
+  showScanContainer() {
+    return (
+      <ScanContainer
+        onBarcodeScan={this.handleOnBarcodeScan}
+      />
+    )
+  }
+
+  handleOnBarcodeScan(data) {
+    this.setState({
+      barcodeData: data,
+      scanBarcode: false,
+    });
+  }
 
   render() {
     return (
       <View style={styles.container}>
-
-        {(this.state.scanBarcode) ? <ProductDetails
-          upc={"028400090858"}/> : this.scanButton() }
+        {(this.state.barcodeData !== null) ?
+           this.showProduct() : (this.state.scanBarcode) ? this.showScanContainer() : this.scanButton()
+        }
       </View>
     );
   }
