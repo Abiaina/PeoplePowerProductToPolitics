@@ -62,9 +62,14 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <View style={styles.header}>
+          <Text>People To Politics</Text>
+        </View>
+        <View style={styles.data}>
         {(this.state.barcodeData !== null) ?
            this.showProduct() : (this.state.scanBarcode) ? this.showScanContainer() : this.scanButton()
         }
+        </View>
       </View>
     );
   }
@@ -73,10 +78,28 @@ export default class App extends React.Component {
 }
 
 const styles = StyleSheet.create({
+  data: {
+    flex: 4,
+    backgroundColor: '#f8f8ff',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    margin: '1em',
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
   },
+  header: {
+    flex: 1,
+    backgroundColor: '#cae1ff',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    margin: '1em',
+  },
+
 });

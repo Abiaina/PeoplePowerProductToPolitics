@@ -8,21 +8,28 @@ export default class ProductDetails extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        productCompanyName: null,
-        parentCompanyName: null,
+        productCompanyDetails: null,
         update: 'this is the initial value',
-        url: `https://p4api.herokuapp.com/company_details/Nestle%20SA`,
+        backendUrl: `https://p4api.herokuapp.com/company_details/`,
+        upcUrl: 'https://api.upcitemdb.com/prod/trial/lookup?upc=',
         status: 'none',
       };
     }
 
   componentDidMount = () => {
-    axios.get(this.state.url)
+    axios.get(this.state.upcUrl)
     .then ((response) => {
-      this.setState({
-        productCompanyName: response.data.company_name,
-        status: 'Complete'
+      axios.get(this.state.backendUrl + response.data.items[0].brand)
+      .then ((response) => {
+        this.setState({
+          productCompanyDetails: response.data,
+        })
       })
+      .catch((error) => {
+        this.setState({
+          status: error,
+        })
+      });
     })
     .catch((error) => {
       this.setState({
