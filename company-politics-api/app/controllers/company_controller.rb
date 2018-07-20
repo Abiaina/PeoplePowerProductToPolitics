@@ -25,7 +25,7 @@ class CompanyController < ApplicationController
       status: :ok
     else
       render json: { errors: "no company matches your description"},
-        status: :bad_request
+        status: :not_found
     end
   end
 

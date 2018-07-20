@@ -35,12 +35,9 @@ export default class App extends React.Component {
 
   showProduct() {
     return (
-      <View>
       <ProductDetails
         barcode={this.state.barcodeData}
       />
-      {this.scanButton()}
-      </View>
     )
   }
 
