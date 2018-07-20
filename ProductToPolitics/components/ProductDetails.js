@@ -13,25 +13,41 @@ export default class ProductDetails extends React.Component {
         backendUrl: `https://p4api.herokuapp.com/company_details/`,
         upcUrl: 'https://api.upcitemdb.com/prod/trial/lookup?upc=',
         status: 'none',
+        brand: null,
       };
     }
 
-  componentDidMount = () => {
-    axios.get(this.state.upcUrl)
+  getCompanyPolitics = () => {
+    console.log(this.state.backendUrl + this.state.brand)
+
+    axios.get(this.state.backendUrl + this.state.brand)
     .then ((response) => {
-      axios.get(this.state.backendUrl + response.data.items[0].brand)
-      .then ((response) => {
-        this.setState({
-          productCompanyDetails: response.data,
-        })
+      console.log('made it to the backend call')
+      console.log(response.data)
+      this.setState({
+        productCompanyDetails: response.data,
       })
-      .catch((error) => {
-        this.setState({
-          status: error,
-        })
-      });
     })
     .catch((error) => {
+      this.setState({
+        status: error,
+      })
+    });
+  }
+
+  componentDidMount = () => {
+    axios.get(this.state.upcUrl + String(this.props.barcode))
+    .then ((response) => {
+      console.log('made it to the upc api call')
+      console.log(this.state.upcUrl + String(this.props.barcode))
+      console.log('this is the response:', response.data)
+      console.log(response.data.items[0].brand)
+      this.setState({
+        brand: response.data.items[0].brand,
+      }, this.getCompanyPolitics)
+    })
+    .catch((error) => {
+      console.log(error);
       this.setState({
         status: error,
       })
@@ -41,8 +57,8 @@ export default class ProductDetails extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-          <Text>{this.state.productCompanyName}</Text>
-          <Text>Error: {this.state.status}</Text>
+          <Text>{this.props.barcode}</Text>
+          <Text>{this.state.productCompanyDetails}</Text>
       </View>
     );
   }

@@ -12,7 +12,7 @@ export default class ScanContainer extends React.Component {
   }
 
   handleOnBarCodeRead(data) {
-    this.props.onBarcodeScan(data);
+    this.props.onBarcodeScan(data.data);
   }
 
   showScanScanner() {

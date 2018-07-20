@@ -7,11 +7,6 @@ export default class Home extends React.Component {
     return (
       <View style={styles.container}>
 
-        <View style={styles.dataContainer}>
-          <View style={styles.dataHeader}>
-            <Text>About Product To Politics</Text>
-          </View>
-
           <View style={styles.data}>
             <Text style={{alignSelf: 'center'}}>How we work</Text>
             <Text>Ever wonder about the companies you interact {'with'} everyday {'?'} </Text>
@@ -25,8 +20,6 @@ export default class Home extends React.Component {
             <Text>Upc code api</Text>
             <Text>100 Companies List</Text>
           </View>
-        </View>
-
       </View>
     );
   }
@@ -45,7 +38,7 @@ const styles = StyleSheet.create({
   data: {
     flex: 1,
     alignSelf: 'stretch',
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     alignItems: 'flex-start',
     justifyContent: 'center',
     flexDirection: 'column',
@@ -62,7 +55,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: 'transparent',
     alignItems: 'center',
     justifyContent: 'flex-start',
     flexDirection: 'column',

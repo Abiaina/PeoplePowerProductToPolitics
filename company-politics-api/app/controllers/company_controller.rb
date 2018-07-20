@@ -9,7 +9,7 @@ class CompanyController < ApplicationController
 
     if !company
       # is it the company or company id then find it by the company id???
-      company = Subsidiary.find_by name: params[:company].company
+      company = Subsidiary.find_by(name: params[:company])&.company
     end
 
     if company
