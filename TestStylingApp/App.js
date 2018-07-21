@@ -14,23 +14,19 @@ export default class App extends React.Component {
 
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-              <LinearGradient
-                colors={['white', '#FDB813']}
-                style={{alignItems: 'center', flex: 1, alignSelf: 'stretch' }}>
-                <View
-                  style={{
-                    alignItems: 'center',
-                    height: 35,
-                    alignSelf: 'stretch',
-                  }}>
-                  <Text>Product To Politics</Text>
-                </View>
-                <View>
-                  {this.state.home ? <Home/> : <CompanyDetails/>}
-                </View>
-              </LinearGradient>
-              </View>
+      <View style={styles.container}>
+      <LinearGradient
+            colors={['white', '#FDB813']}
+            style={{alignItems: 'center', flex: 1, alignSelf: 'stretch' }}>
+
+          <View style={styles.header}>
+            <Text>Product To Politics</Text>
+          </View>
+          <View style={styles.data}>
+            <Text>Data I want to show</Text>
+          </View>
+        </LinearGradient>
+      </View>
 
     );
   }
