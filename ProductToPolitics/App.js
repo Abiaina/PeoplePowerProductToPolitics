@@ -12,6 +12,8 @@ export default class App extends React.Component {
       this.state = {
         scanBarcode: false,
         barcodeData: null,
+        about: false,
+        home: false,
       };
       this.handleOnBarcodeScan = this.handleOnBarcodeScan.bind(this);
     }
@@ -22,9 +24,23 @@ export default class App extends React.Component {
       barcodeData: null,
     });
   }
+  //
+  // toggleHomeState = () => {
+  //   this.setState({
+  //     home: !this.state.home,
+  //     barcodeData: null,
+  //     scanBarcode: false,
+  //   });
+  // }
+  //
+  // toggleHomeState = () => {
+  //   this.setState({
+  //     about: !this.state.about,
+  //   });
+  // }
 
   scanButton () {
-    return(
+    return (
       <Button onPress={this.toggleState}
         title="Scan Barcode"
         color="#841500"
@@ -32,6 +48,26 @@ export default class App extends React.Component {
         />
     )
   }
+
+  // homeButton () {
+  //   return (
+  //     <Button onPress={this.toggleHomeState}
+  //       title="Home"
+  //       color='green'
+  //       accessibilityLabel="Home"
+  //       />
+  //   )
+  // }
+  //
+  // aboutButton () {
+  //   return (
+  //     <Button onPress={this.toggleAboutState}
+  //       title="About"
+  //       color='blue'
+  //       accessibilityLabel="About"
+  //       />
+  //   )
+  // }
 
   showProduct() {
     return (
@@ -64,6 +100,7 @@ export default class App extends React.Component {
             style={{alignItems: 'center', flex: 1, alignSelf: 'stretch' }}>
 
           <View style={styles.header}>
+            <Image source={require('./P2.png')}/>
             <Text>Product To Politics</Text>
           </View>
           <View style={styles.data}>
@@ -71,6 +108,7 @@ export default class App extends React.Component {
              this.showProduct() : ((this.state.scanBarcode) ? this.showScanContainer() : this.scanButton())
           }
           </View>
+
         </LinearGradient>
       </View>
     );
@@ -89,8 +127,8 @@ const styles = StyleSheet.create({
       flexDirection: 'column',
     },
     header: {
-      alignSelf: 'stretch',
-      height: 75,
+      alignSelf: 'center',
+      height: 200,
       backgroundColor: 'white',
       alignItems: 'center',
       justifyContent: 'flex-end',

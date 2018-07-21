@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import ScrollElement from './ScrollElement'
 import { StyleSheet, Text, View, Image, Button } from 'react-native';
 
 
@@ -8,24 +9,44 @@ export default class ProductDetails extends React.Component {
   constructor(props) {
       super(props);
       this.state = {
-        productCompanyDetails: null,
         update: 'this is the initial value',
         backendUrl: `https://p4api.herokuapp.com/company_details/`,
         upcUrl: 'https://api.upcitemdb.com/prod/trial/lookup?upc=',
         status: 'none',
-        brand: null,
+        brand:'none',
+        parentCompany: "",
+        lobbyingDollars: "",
+        topRecipients: "",
+        companyShareHolders: "",
+        contributionDollars: "",
+        mostLobbiedBill: "",
       };
     }
 
-  getCompanyPolitics = () => {
-    console.log(this.state.backendUrl + this.state.brand)
+// map also does this?
+  mapData = (data) => {
+    const array = {};
 
+    for(i in data) {
+      array[name] = data[i].name;
+    }
+    return array
+  }
+
+  getCompanyPolitics = () => {
     axios.get(this.state.backendUrl + this.state.brand)
     .then ((response) => {
-      console.log('made it to the backend call')
-      console.log(response.data)
+      const data = response.data;
+      const companyShareHolders = data.company_share_holders[0].name;
+      const topRecipients = this.mapData(data.top_recipients);
+
       this.setState({
-        productCompanyDetails: response.data,
+        parentCompany: data.company_name,
+        lobbyingDollars: data.lobbying_dollars,
+        topRecipients: topRecipients,
+        companyShareHolders: companyShareHolders,
+        contributionDollars: data.contribution_dollars,
+        mostLobbiedBill: data.most_lobbied_bill.name,
       })
     })
     .catch((error) => {
@@ -38,10 +59,6 @@ export default class ProductDetails extends React.Component {
   componentDidMount = () => {
     axios.get(this.state.upcUrl + String(this.props.barcode))
     .then ((response) => {
-      console.log('made it to the upc api call')
-      console.log(this.state.upcUrl + String(this.props.barcode))
-      console.log('this is the response:', response.data)
-      console.log(response.data.items[0].brand)
       this.setState({
         brand: response.data.items[0].brand,
       }, this.getCompanyPolitics)
@@ -54,27 +71,75 @@ export default class ProductDetails extends React.Component {
     });
   }
 
+
   render() {
     return (
-      <View style={styles.container}>
-          <Text>{this.props.barcode}</Text>
-          <Text>{this.state.productCompanyDetails}</Text>
-      </View>
+      <View>
+        <View style={styles.dataContainer}>
+          <View style={styles.dataHeader}>
+            <Text>{this.state.brand} is a subsidiary of {this.state.parentCompany}</Text>
+          </View>
+          <View style={styles.dataHeader}>
+            <Text>Political Activity of {this.state.parentCompany}</Text>
+          </View>
+
+          <View style={styles.data}>
+            <Text>Lobbyinng Dollars: ${this.state.lobbyingDollars}</Text>
+          </View>
+
+          <View style={styles.data}>
+            <Text>Contribution Dollars: ${this.state.contributionDollars}</Text>
+          </View>
+
+          <View style={styles.data}>
+            <ScrollElement
+            topRecipients={this.state.topRecipients}
+            companyShareHolders={this.state.ccompanyShareHolders}/>
+          </View>
+
+          <View style={styles.data}>
+            <Text>Most Lobbied Bill: {this.state.mostLobbiedBill}</Text>
+            </View>
+            </View>
+        </View>
     );
   }
 }
-
 const styles = StyleSheet.create({
+  dataContainer: {
+    flex: 4,
+    alignSelf: 'stretch',
+    backgroundColor: '#f8f8ff',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    padding: 10,
+  },
+  data: {
+    flex: 1,
+    alignSelf: 'stretch',
+    backgroundColor: '#fff',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    padding: 25,
+  },
+  dataHeader: {
+    height: 40,
+    alignSelf: 'stretch',
+    backgroundColor: '#baedd3',
+    alignItems: 'flex-start',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    padding: 25,
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'stretch',
-    justifyContent: 'center',
-  },
-  pic: {
-    flex: 0.5,
-    backgroundColor: '#fff',
-    alignItems: 'stretch',
-    justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    padding: 10,
+    alignSelf: 'stretch',
   },
 });
