@@ -4,12 +4,17 @@ class CompanyController < ApplicationController
 #http://localhost:3000/company_details/company name
 # use '%20' for spaces
 
+  
   def company_details
-    company = Company.find_by name: params[:company]
+    company = Company.find_by name: params[:company.upcase]
 
     if !company
       # is it the company or company id then find it by the company id???
-      company = Subsidiary.find_by(name: params[:company])&.company
+      company = Subsidiary.find_by(name: params[:company].upcase)&.company
+
+      if !company
+        company = Company.find_by name:
+      end
     end
 
     if company

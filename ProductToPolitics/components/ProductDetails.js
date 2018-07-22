@@ -92,16 +92,23 @@ export default class ProductDetails extends React.Component {
           </View>
 
           <View style={styles.data}>
-            <ScrollElement
-            topRecipients={this.state.topRecipients}
-            companyShareHolders={this.state.ccompanyShareHolders}/>
+            <ScrollView style={{flex:1}}>
+              <Text>Top Recipients: {this.state.topRecipients}</Text>
+              companyShareHolders={this.state.ccompanyShareHolders}
+            </ScrollView>
+          </View>
+
+          <View style={styles.data}>
+            <ScrollView style={{flex:1}}>
+              <Text>Company Share Holders: {this.state.ccompanyShareHolders}</Text>
+            </ScrollView>
           </View>
 
           <View style={styles.data}>
             <Text>Most Lobbied Bill: {this.state.mostLobbiedBill}</Text>
-            </View>
-            </View>
+          </View>
         </View>
+      </View>
     );
   }
 }

@@ -26,7 +26,7 @@ json_data.each do |json|
   end
 
   company = Company.create!({
-    :name => name,
+    :name => name.upcase,
     :lobbying_dollars => lobbying_dollars,
     :contribution_dollars => contribution_dollars,
     :open_secret_id => os_id,
@@ -59,7 +59,7 @@ json_data.each do |json|
   subsidiaries.each do |subsidiary|
     sub = Subsidiary.find_by name: subsidiary
     if !sub
-      sub = Subsidiary.create({ :name => subsidiary })
+      sub = Subsidiary.create({ :name => subsidiary.upcase })
       puts "  Created subsidiary #{sub.name}"
     else
       puts "WARNING: duplicate subsidiary #{sub.name} for #{sub.company.name} and #{company.name}"

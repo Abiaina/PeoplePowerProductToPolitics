@@ -7,7 +7,9 @@ import CompanyDetails from './components/CompanyDetails';
 import { LinearGradient } from 'expo';
 
 
-export default class App extends React.Component {
+
+// Works with an array of the values to show
+export default class SampleScroll extends React.Component {
     renderImages = () => {
 
       const images = [
