@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import ScrollElement from './ScrollElement'
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, ScrollView } from 'react-native';
 
 
 export default class ProductDetails extends React.Component {
