@@ -2,6 +2,9 @@ import React from 'react';
 import { AppRegistry, StyleSheet, Text, View, Button, Image } from 'react-native';
 import ScanContainer from './components/ScanContainer'
 import ProductDetails from './components/ProductDetails'
+import About from './components/About'
+import Definition from './components/Definition'
+
 import { BarCodeScanner, Permissions, LinearGradient } from 'expo';
 
 
@@ -108,7 +111,8 @@ export default class App extends React.Component {
              this.showProduct() : ((this.state.scanBarcode) ? this.showScanContainer() : this.scanButton())
           }
           </View>
-
+<Definition/>
+<About/>
         </LinearGradient>
       </View>
     );

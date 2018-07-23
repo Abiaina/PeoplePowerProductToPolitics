@@ -23,22 +23,12 @@ export default class ProductDetails extends React.Component {
       };
     }
 
-// map also does this?
-  mapData = (data) => {
-    const array = {};
-
-    for(i in data) {
-      array[name] = data[i].name;
-    }
-    return array
-  }
-
   getCompanyPolitics = () => {
     axios.get(this.state.backendUrl + this.state.brand)
     .then ((response) => {
       const data = response.data;
-      const companyShareHolders = data.company_share_holders[0].name;
-      const topRecipients = this.mapData(data.top_recipients);
+      const companyShareHolders = data.company_share_holders.map(x => x.name);
+      const topRecipients = data.top_recipients.map(x => x.name);
 
       this.setState({
         parentCompany: data.company_name,
@@ -92,16 +82,29 @@ export default class ProductDetails extends React.Component {
           </View>
 
           <View style={styles.data}>
-            <ScrollView style={{flex:1}}>
-              <Text>Top Recipients: {this.state.topRecipients}</Text>
-              companyShareHolders={this.state.ccompanyShareHolders}
-            </ScrollView>
+            <LinearGradient
+              colors={['#9DD1DB', 'white']}
+              style={styles.backgroundGradient}>
+                <Text>Top Recipients</Text>
+                <View style={styles.data}>
+                   <ScrollView vertical>
+                     {this.renderlist(this.state.topRecipients)}
+                  </ScrollView>
+                </View>
+            </LinearGradient>
           </View>
 
           <View style={styles.data}>
-            <ScrollView style={{flex:1}}>
-              <Text>Company Share Holders: {this.state.ccompanyShareHolders}</Text>
-            </ScrollView>
+            <LinearGradient
+              colors={['#9DD1DB', 'white']}
+              style={styles.backgroundGradient}>
+                <Text>Company Share Holders</Text>
+                <View style={styles.data}>
+                   <ScrollView vertical>
+                     {this.renderlist(this.state.companyShareHolders)}
+                  </ScrollView>
+                </View>
+            </LinearGradient>
           </View>
 
           <View style={styles.data}>
