@@ -10,17 +10,8 @@ import { LinearGradient } from 'expo';
 
 // Works with an array of the values to show
 export default class SampleScroll extends React.Component {
-  constructor(props) {
-      super(props);
-      this.state = {
-        list: [
-        "Capito, Shelley Moore (R-WV)","Cohen, Steve (D-TN)","Collins, Susan M (R-ME)","Conaway, Mike (R-TX)","Dingell, Debbie (D-MI)","Foxx, Virginia (R-NC)", "Frelinghuysen, Rodney (R-NJ)",
-              "Grijalva, Raul M (D-AZ)"
-        ]
-      };
-    }
 
-    renderlist = (list) => {
+    renderList = (list) => {
 
     return list.map((d,i) => (
       <View key={i}>
@@ -37,7 +28,7 @@ export default class SampleScroll extends React.Component {
 
             <View style={styles.data}>
                <ScrollView vertical>
-                 {this.renderlist(this.state.list)}
+                 {this.renderList(this.props.list)}
               </ScrollView>
             </View>
 

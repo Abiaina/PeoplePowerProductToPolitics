@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 import { StyleSheet, Text, View, Image, Button, ScrollView } from 'react-native';
+import { BarCodeScanner, Permissions, LinearGradient } from 'expo';
+import ListScroll from './ListScroll'
+
+
 
 
 export default class ProductDetails extends React.Component {
@@ -15,8 +19,8 @@ export default class ProductDetails extends React.Component {
         brand:'none',
         parentCompany: "",
         lobbyingDollars: "",
-        topRecipients: "",
-        companyShareHolders: "",
+        topRecipients: [],
+        companyShareHolders: [],
         contributionDollars: "",
         mostLobbiedBill: "",
       };
@@ -60,7 +64,6 @@ export default class ProductDetails extends React.Component {
     });
   }
 
-
   render() {
     return (
       <View>
@@ -85,11 +88,9 @@ export default class ProductDetails extends React.Component {
               colors={['#9DD1DB', 'white']}
               style={styles.backgroundGradient}>
                 <Text>Top Recipients</Text>
-                <View style={styles.data}>
-                   <ScrollView vertical>
-                     {this.renderlist(this.state.topRecipients)}
-                  </ScrollView>
-                </View>
+                  <ListScroll
+                     list={this.state.topRecipients}
+                  />
             </LinearGradient>
           </View>
 
@@ -98,11 +99,9 @@ export default class ProductDetails extends React.Component {
               colors={['#9DD1DB', 'white']}
               style={styles.backgroundGradient}>
                 <Text>Company Share Holders</Text>
-                <View style={styles.data}>
-                   <ScrollView vertical>
-                     {this.renderlist(this.state.companyShareHolders)}
-                  </ScrollView>
-                </View>
+                  <ListScroll
+                     list={this.state.companyShareHolders}
+                  />
             </LinearGradient>
           </View>
 

@@ -24,8 +24,8 @@ export default class About extends Component {
       <Text>Learn the political impacts {'of'} your purchase</Text>
 
       <Text>Data Source:</Text>
-      <Text>Open Secrets</Text>
-      <Text>Upc code api</Text>
+      <Text>Open Secrets API</Text>
+      <Text>upcitemdb API</Text>
       <Text>100 Companies List</Text>
         {this._renderButton('Close', () => this.setState({ visibleModal: null }))}
     </View>
