@@ -48,12 +48,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     padding: 12,
     margin: 16,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 4,
+    color: 'white',
     borderColor: 'rgba(0, 0, 0, 0.1)',
   },
   modalContent: {

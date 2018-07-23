@@ -8,15 +8,13 @@ import Definition from './components/Definition'
 import { BarCodeScanner, Permissions, LinearGradient } from 'expo';
 
 
-
 export default class App extends React.Component {
   constructor() {
       super();
       this.state = {
         scanBarcode: false,
         barcodeData: null,
-        about: false,
-        home: false,
+        home: true,
       };
       this.handleOnBarcodeScan = this.handleOnBarcodeScan.bind(this);
     }
@@ -25,22 +23,27 @@ export default class App extends React.Component {
     this.setState({
       scanBarcode: !this.state.scanBarcode,
       barcodeData: null,
+      home: !this.state.home,
     });
   }
-  //
-  // toggleHomeState = () => {
-  //   this.setState({
-  //     home: !this.state.home,
-  //     barcodeData: null,
-  //     scanBarcode: false,
-  //   });
-  // }
-  //
-  // toggleHomeState = () => {
-  //   this.setState({
-  //     about: !this.state.about,
-  //   });
-  // }
+
+  resetHomeState = () => {
+    this.setState({
+      scanBarcode: false,
+      barcodeData: null,
+      home: true,
+    });
+  }
+
+  homeButton () {
+    return (
+      <Button onPress={this.resetHomeState}
+        title="Home"
+        color='green'
+        accessibilityLabel="Home"
+        />
+    )
+  }
 
   scanButton () {
     return (
@@ -52,25 +55,6 @@ export default class App extends React.Component {
     )
   }
 
-  // homeButton () {
-  //   return (
-  //     <Button onPress={this.toggleHomeState}
-  //       title="Home"
-  //       color='green'
-  //       accessibilityLabel="Home"
-  //       />
-  //   )
-  // }
-  //
-  // aboutButton () {
-  //   return (
-  //     <Button onPress={this.toggleAboutState}
-  //       title="About"
-  //       color='blue'
-  //       accessibilityLabel="About"
-  //       />
-  //   )
-  // }
 
   showProduct() {
     return (
@@ -111,8 +95,10 @@ export default class App extends React.Component {
              this.showProduct() : ((this.state.scanBarcode) ? this.showScanContainer() : this.scanButton())
           }
           </View>
-<Definition/>
-<About/>
+<View>{this.state.home ? <Text></Text> : this.homeButton()}
+</View>
+          <Definition/>
+          <About/>
         </LinearGradient>
       </View>
     );
@@ -132,8 +118,8 @@ const styles = StyleSheet.create({
     },
     header: {
       alignSelf: 'center',
-      height: 200,
-      backgroundColor: 'white',
+      height: 150,
+      backgroundColor: 'rgba(255, 255, 255, 0.5)',
       alignItems: 'center',
       justifyContent: 'flex-end',
       flexDirection: 'column',

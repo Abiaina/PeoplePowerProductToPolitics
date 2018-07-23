@@ -18,9 +18,16 @@ export default class About extends Component {
 
   _renderModalContent = () => (
     <View style={styles.modalContent}>
+      <Text>How we work:</Text>
+      <Text>Ever wonder about the companies you interact {'with'} everyday {'?'}</Text>
+      <Text>Scan any barcode {'of'} a product</Text>
+      <Text>Learn the political impacts {'of'} your purchase</Text>
 
-      <Text>{'scan and learn!'}</Text>
-      {this._renderButton('Close', () => this.setState({ visibleModal: null }))}
+      <Text>Data Source:</Text>
+      <Text>Open Secrets</Text>
+      <Text>Upc code api</Text>
+      <Text>100 Companies List</Text>
+        {this._renderButton('Close', () => this.setState({ visibleModal: null }))}
     </View>
   );
 
@@ -43,12 +50,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    backgroundColor: 'yellow',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)',
     padding: 12,
     margin: 16,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 4,
+    color: 'white',
     borderColor: 'rgba(0, 0, 0, 0.1)',
   },
   modalContent: {
