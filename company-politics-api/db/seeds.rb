@@ -17,10 +17,11 @@ json_data.each do |json|
   top_recipients = json["recipients"]
   os_id = json["os_id"]
   subsidiaries = json["subsidiaries"]
+  mlb_description = json["mlb_description"]
 
   bill = MostLobbiedBill.find_by name: most_lobbied_bill
   if !bill
-    bill = MostLobbiedBill.create!({ :name => most_lobbied_bill, :description => ""})
+    bill = MostLobbiedBill.create!({ :name => most_lobbied_bill, :description => mlb_description})
     puts "    new bill #{bill.name}"
 
   end

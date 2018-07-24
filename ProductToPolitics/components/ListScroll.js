@@ -1,15 +1,12 @@
 import React from 'react';
 import axios from 'axios';
 import { StyleSheet, Text, View, Image, Button, ScrollView } from 'react-native';
-import Home from './components/Home';
-import ScrollElement from './components/ScrollElement';
-import CompanyDetails from './components/CompanyDetails';
 import { LinearGradient } from 'expo';
 
 
 
 // Works with an array of the values to show
-export default class SampleScroll extends React.Component {
+export default class ListScroll extends React.Component {
 
     renderList = (list) => {
 

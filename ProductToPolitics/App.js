@@ -49,7 +49,7 @@ export default class App extends React.Component {
     return (
       <Button onPress={this.toggleState}
         title="Scan Barcode"
-        color="#841500"
+        color="black"
         accessibilityLabel="Scan barcode"
         />
     )
@@ -90,15 +90,20 @@ export default class App extends React.Component {
             <Image source={require('./P2.png')}/>
             <Text>Product To Politics</Text>
           </View>
-          <View style={styles.data}>
+          <View style={styles.dataContainer}>
           {(this.state.barcodeData !== null) ?
              this.showProduct() : ((this.state.scanBarcode) ? this.showScanContainer() : this.scanButton())
           }
           </View>
-<View>{this.state.home ? <Text></Text> : this.homeButton()}
-</View>
-          <Definition/>
-          <About/>
+
+          <View style={styles.navButtonContainer}>
+            <View>
+              {this.state.home ? <Text></Text> : this.homeButton()}
+            </View>
+            <Definition/>
+            <About/>
+          </View>
+
         </LinearGradient>
       </View>
     );
@@ -117,12 +122,20 @@ const styles = StyleSheet.create({
       flexDirection: 'column',
     },
     header: {
+      alignSelf: 'stretch',
+      height: 100,
+      backgroundColor: 'rgba(255, 255, 255, 0.2)',
+      alignItems: 'center',
+      justifyContent: 'center',
+      flexDirection: 'row',
+      padding: 10,
+    },
+    navButtonContainer: {
       alignSelf: 'center',
-      height: 150,
-      backgroundColor: 'rgba(255, 255, 255, 0.5)',
+      height: 75,
       alignItems: 'center',
       justifyContent: 'flex-end',
-      flexDirection: 'column',
+      flexDirection: 'row',
       padding: 10,
     },
     backgroundGradient: {
@@ -133,9 +146,8 @@ const styles = StyleSheet.create({
       position: 'absolute',
     },
     dataContainer: {
-      flex: 4,
+      flex: 1,
       alignSelf: 'stretch',
-      backgroundColor: '#f8f8ff',
       alignItems: 'flex-start',
       justifyContent: 'center',
       flexDirection: 'column',

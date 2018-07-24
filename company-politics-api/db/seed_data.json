@@ -1,6 +1,7 @@
 [
   {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1628 (American Health Care Act of 2017)",
+    "most_lobbied_bill": "H.R.1628 American Health Care Act of 2017",
+    "mlb_description": "The American Health Care Act of 2017 (AHCA) was a leading proposal in the first half of 2017 by House Republicans to repeal and replace the Affordable Care Act (aka Obamacare, but we'll abbreviate it ACA) and defund Planned Parenthood. It was also the vehicle for passage of the Senate Republicans' leading proposals.",
     "name": "Nestle SA",
     "os_id": "D000042332",
     "recipients": [
@@ -29,7 +30,8 @@
     "total_lobby_dollars": "300000"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1256 ()",
+    "most_lobbied_bill": "H.R.1256",
+    "mlb_description": "This bill directs the U.S. Fish and Wildlife Service to remove specific properties in Brick, New Jersey, from the John H. Chafee Coastal Barrier Resources System.",
     "name": "Philip Morris International",
     "os_id": "D000055403",
     "recipients": [
@@ -48,7 +50,8 @@
     "total_lobby_dollars": "1420000"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.985 (Fairness in Class Action Litigation and Furthering Asbestos Claim Transparency Act of 2017)",
+    "most_lobbied_bill": "H.R.985 Fairness in Class Action Litigation and Furthering Asbestos Claim Transparency Act of 2017",
+    "mlb_description": "H.R. 985 prohibits a federal court from certifying any proposed class seeking monetary relief for personal injury or economic loss unless the party seeking the class action shows that each proposed class member suffered the same type and scope of injury as the named class representative or representatives.",
     "name": "Procter & Gamble",
     "os_id": "D000000485",
     "recipients": [
@@ -87,7 +90,8 @@
     "total_lobby_dollars": "809671"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.764 (Veterans Education Priority Enrollment Act of 2017)",
+    "most_lobbied_bill": "S.764 Veterans Education Priority Enrollment Act of 2017",
+    "mlb_description": "This bill prohibits the Department of Veterans Affairs or a state approving agency from approving a program of education offered by an educational institution for purposes of an educational assistance program for veterans or members of the Selected Reserve or the Ready Reserve of the Armed Forces unless any such institution that administers a priority enrollment system allows an eligible veteran, member, or dependent to enroll in courses at the earliest possible time.",
     "name": "PepsiCo",
     "os_id": "D000000200",
     "recipients": [
@@ -127,7 +131,8 @@
     "total_lobby_dollars": "1470000"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.236 (Craft Beverage Modernization and Tax Reform Act of 2017)",
+    "most_lobbied_bill": "S.236 Craft Beverage Modernization and Tax Reform Act of 2017",
+    "mlb_description": "This bill amends the Internal Revenue Code, with respect to the tax treatment of certain alcoholic beverages.",
     "name": "Anheuser-Busch InBev",
     "os_id": "D000042510",
     "recipients": [
@@ -225,7 +230,8 @@
     "total_lobby_dollars": "0"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1296 ()",
+    "most_lobbied_bill": "H.R.1296",
+    "mlb_description": "This bill amends the Internal Revenue Code to specify rules for applying the deduction for income from domestic production activities to contract manufacturing or production arrangements.",
     "name": "Kraft Heinz",
     "os_id": "D000067808",
     "recipients": [
@@ -255,7 +261,8 @@
     "total_lobby_dollars": "220000"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1 (Tax Cuts and Jobs Act)",
+    "most_lobbied_bill": "H.R.1 Tax Cuts and Jobs Act",
+    "mlb_description": "The corporate tax rate would be reduced to 21 percent, keep the seven-tier tax bracket structure of current law for individuals, and reducing the threshold for medical expense deductions from 10 percent of the individual's income to 7.5 percent.",
     "name": "Mondelez International",
     "os_id": "D000067057",
     "recipients": [
@@ -283,7 +290,8 @@
     "total_lobby_dollars": "200000"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1136 (FDA Deeming Authority Clarification Act of 2017)",
+    "most_lobbied_bill": "H.R.1136 FDA Deeming Authority Clarification Act of 2017",
+    "mlb_description": "This bill amends the Federal Food, Drug, and Cosmetic Act (FFDCA) to: (1) revise premarket review and reporting requirements for products newly deemed by the Food and Drug Administration (FDA) to be tobacco products; and (2) grant the FDA the authority to regulate vapor products, which include products that produce vapor with nicotine (e.g., e-cigarettes) and nicotine intended to be used with such a product (e.g., nicotine cartridges).",
     "name": "Altria Group",
     "os_id": "D000000067",
     "recipients": [
@@ -357,7 +365,8 @@
     "total_lobby_dollars": "10000"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.1609 (Energy and Water Development and Related Agencies Appropriations Act, 2018)",
+    "most_lobbied_bill": "S.1609 Energy and Water Development and Related Agencies Appropriations Act, 2018",
+    "mlb_description": "Bill provides appropriations for the civil works projects of the U.S. Army Corps of Engineers; the Department of the Interior's Bureau of Reclamation and Central Utah Project; the Department of Energy (DOE); and several independent agencies, including the Nuclear Regulatory Commission. The bill increases discretionary FY2018 Energy and Water Development funding above FY2017 levels.",
     "name": "General Mills",
     "os_id": "D000000467",
     "recipients": [
@@ -387,7 +396,8 @@
     "total_lobby_dollars": "230000"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.3358 (Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2018)",
+    "most_lobbied_bill": "H.R.3358 Departments of Labor, Health and Human Services, and Education, and Related Agencies Appropriations Act, 2018",
+    "mlb_description": "Bill provides appropriations for the Department of Labor; most of the Department of Health and Human Services (HHS); the Department of Education (ED); and several related agencies, including the Social Security Administration, the Corporation for National and Community Service, the Corporation for Public Broadcasting, and the National Labor Relations Board.",
     "name": "Diageo PLC",
     "os_id": "D000025490",
     "recipients": [
@@ -481,7 +491,8 @@
     "total_lobby_dollars": "0"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.617 (Lower Farmington River and Salmon Brook Wild and Scenic River Act)",
+    "most_lobbied_bill": "S.617 Lower Farmington River and Salmon Brook Wild and Scenic River Act",
+    "mlb_description": "This bill amends the Wild and Scenic Rivers Act to designate specified segments of the Lower Farmington River and Salmon Brook in Connecticut as components of the National Wild and Scenic Rivers System.",
     "name": "Stanley Black & Decker",
     "os_id": "D000057143",
     "recipients": [
@@ -506,7 +517,8 @@
     "total_lobby_dollars": "630000"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.1113 (Personal Care Products Safety Act)",
+    "most_lobbied_bill": "S.1113 Personal Care Products Safety Act",
+    "mlb_description": "This bill amends the Federal Food, Drug, and Cosmetic Act to require cosmetics companies to register their facilities with the Food and Drug Administration (FDA) and to submit to the FDA cosmetic ingredient statements that include the amounts of a cosmetic's ingredients.",
     "name": "Estee Lauder Companies",
     "os_id": "D000000468",
     "recipients": [
@@ -557,7 +569,8 @@
     "total_lobby_dollars": "190000"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1450 (No Stolen Trademarks Honored in America Act)",
+    "most_lobbied_bill": "H.R.1450 No Stolen Trademarks Honored in America Act",
+    "mlb_description": "This bill amends the Department of Commerce and Related Agencies Appropriations Act, 1999 to prohibit U.S. courts from recognizing rights by an individual of a mark, trade name, or commercial name that was used in connection with a business or assets that were confiscated by the Cuban government.",
     "name": "Pernod Ricard",
     "os_id": "D000042306",
     "recipients": [
@@ -580,7 +593,8 @@
     "total_lobby_dollars": "480000"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.1 (Tax Cuts and Jobs Act)",
+    "most_lobbied_bill": "H.R.1 Tax Cuts and Jobs Act",
+    "mlb_description": "The corporate tax rate would be reduced to 21 percent, keep the seven-tier tax bracket structure of current law for individuals, and reducing the threshold for medical expense deductions from 10 percent of the individual's income to 7.5 percent.",
     "name": "Constellation Brands",
     "os_id": "D000025112",
     "recipients": [
@@ -632,7 +646,8 @@
     "total_lobby_dollars": "0"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:S.1631 (Department of State Authorities Act, Fiscal Year 2018)",
+    "most_lobbied_bill": "S.1631 Department of State Authorities Act, Fiscal Year 2018",
+    "mlb_description": "The bill calls for establishment in the State Department of: (1) a Bureau of Democracy, Human Rights, and Labor; (2) an Assistant Secretary for International Narcotics and Law Enforcement Affairs; and (3) an Office of International Disability Rights.",
     "name": "Hanesbrands",
     "os_id": "D000041306",
     "recipients": [
@@ -692,7 +707,8 @@
     "total_lobby_dollars": "0"
 },
 {
-    "most_lobbied_bill": "BILL MOST FREQUENTLY LOBBIED ON IN THE 114th CONGRESS:H.R.644 (Conscience Protection Act of 2017)",
+    "most_lobbied_bill": "H.R.644 Conscience Protection Act of 2017",
+    "mlb_description": "This bill amends the Public Health Service Act to codify the prohibition against the federal government and state and local governments that receive federal financial assistance for health-related activities penalizing or discriminating against a health care provider based on the provider's refusal to be involved in, or provide coverage for, abortion.",
     "name": "Brown-Forman",
     "os_id": "D000000305",
     "recipients": [

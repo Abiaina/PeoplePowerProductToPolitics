@@ -1,8 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import { StyleSheet, Text, View, Image, Button, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, FlatList, ScrollView } from 'react-native';
 import { BarCodeScanner, Permissions, LinearGradient } from 'expo';
-import ListScroll from './ListScroll'
 
 
 
@@ -23,21 +22,21 @@ export default class ProductDetails extends React.Component {
         companyShareHolders: [],
         contributionDollars: "",
         mostLobbiedBill: "",
-      };
+        list: ["Capito, Shelley Moore (R-WV)","Cohen, Steve (D-TN)","Collins, Susan M (R-ME)","Conaway, Mike (R-TX)","Dingell, Debbie (D-MI)","Foxx, Virginia (R-NC)", "Frelinghuysen, Rodney (R-NJ)",
+              "Grijalva, Raul M (D-AZ)"]
+        };
     }
 
   getCompanyPolitics = () => {
     axios.get(this.state.backendUrl + this.state.brand)
     .then ((response) => {
       const data = response.data;
-      const companyShareHolders = data.company_share_holders.map(x => x.name);
-      const topRecipients = data.top_recipients.map(x => x.name);
 
       this.setState({
         parentCompany: data.company_name,
         lobbyingDollars: data.lobbying_dollars,
-        topRecipients: topRecipients,
-        companyShareHolders: companyShareHolders,
+        topRecipients: data.top_recipients,
+        companyShareHolders: data.company_share_holders,
         contributionDollars: data.contribution_dollars,
         mostLobbiedBill: data.most_lobbied_bill.name,
       })
@@ -65,8 +64,10 @@ export default class ProductDetails extends React.Component {
   }
 
   render() {
+console.log(this.state.topRecipients);
+
     return (
-      <View>
+      <ScrollView>
         <View style={styles.dataContainer}>
           <View style={styles.dataHeader}>
             <Text>{this.state.brand} is a subsidiary of {this.state.parentCompany}</Text>
@@ -76,40 +77,43 @@ export default class ProductDetails extends React.Component {
           </View>
 
           <View style={styles.data}>
-            <Text>Lobbyinng Dollars: ${this.state.lobbyingDollars}</Text>
+            <Text>Lobbying Dollars: ${this.state.lobbyingDollars}</Text>
           </View>
 
           <View style={styles.data}>
             <Text>Contribution Dollars: ${this.state.contributionDollars}</Text>
           </View>
 
-          <View style={styles.data}>
+          <View style={styles.dataList}>
             <LinearGradient
               colors={['#9DD1DB', 'white']}
               style={styles.backgroundGradient}>
-                <Text>Top Recipients</Text>
-                  <ListScroll
-                     list={this.state.topRecipients}
+
+                <Text>Top Contribution Dollar Recipients</Text>
+                  <FlatList
+                    data={this.state.topRecipients}
+                    renderItem={({item}) => (
+                      <Text>{item.name}</Text>
+                     )}
                   />
             </LinearGradient>
           </View>
 
           <View style={styles.data}>
-            <LinearGradient
-              colors={['#9DD1DB', 'white']}
-              style={styles.backgroundGradient}>
                 <Text>Company Share Holders</Text>
-                  <ListScroll
-                     list={this.state.companyShareHolders}
-                  />
-            </LinearGradient>
+                <FlatList
+                  data={this.state.companyShareHolders}
+                  renderItem={({item}) => (
+                    <Text>{item.name}</Text>
+                   )}
+                />
           </View>
 
           <View style={styles.data}>
             <Text>Most Lobbied Bill: {this.state.mostLobbiedBill}</Text>
           </View>
         </View>
-      </View>
+      </ScrollView>
     );
   }
 }
@@ -126,11 +130,13 @@ const styles = StyleSheet.create({
   data: {
     flex: 1,
     alignSelf: 'stretch',
-    backgroundColor: '#fff',
+    backgroundColor: 'rgba(255, 255, 255, 0.35)',
     alignItems: 'flex-start',
     justifyContent: 'center',
     flexDirection: 'column',
-    padding: 25,
+    padding: 15,
+    borderRadius: 4,
+    borderColor: 'rgba(10, 10, 10, 0.2)',
   },
   dataHeader: {
     height: 40,

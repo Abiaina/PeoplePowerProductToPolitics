@@ -26,7 +26,7 @@ export default class About extends Component {
       <Text>Data Source:</Text>
       <Text>Open Secrets API</Text>
       <Text>upcitemdb API</Text>
-      <Text>100 Companies List</Text>
+      <Text>{'govtrack.us'}</Text>
         {this._renderButton('Close', () => this.setState({ visibleModal: null }))}
     </View>
   );
@@ -50,13 +50,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    backgroundColor: 'rgba(255, 255, 255, 0.4)',
     padding: 12,
     margin: 16,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 4,
-    color: 'white',
     borderColor: 'rgba(0, 0, 0, 0.1)',
   },
   modalContent: {
