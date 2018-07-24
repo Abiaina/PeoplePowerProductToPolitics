@@ -17,8 +17,8 @@ class CompanyController < ApplicationController
     if company
       render json: {
         company_name: company.name,
-        lobbying_dollars: company.lobbying_dollars,
-        contribution_dollars: company.contribution_dollars,
+        lobbying_dollars: get_USD(company.lobbying_dollars),
+        contribution_dollars: get_USD(company.contribution_dollars),
         company_share_holders: company.share_holders,
         most_lobbied_bill: company.most_lobbied_bill.name,
         mlb_description: company.most_lobbied_bill.description,
@@ -35,6 +35,28 @@ class CompanyController < ApplicationController
   private
   def company_params
      params.require(:company).permit(:name, :id)
-   end
+  end
+
+  # only works for positive integers without decimals
+  def get_USD (num_string)
+    if num_string == nil || num_string.to_i == 0
+      return num_string
+    end
+
+    num_string = num_string.to_s.split("")
+
+    usd = ["$"]
+
+    num_string.each_with_index do |num, index|
+      if index == ((num_string.length) -1)
+        usd << "#{num}.00"
+      elsif index != 0 && index % 3 == 0
+        usd << ",#{num}"
+      else
+        usd << num.to_s
+      end
+    end
+    return usd.join("")
+  end
 
 end

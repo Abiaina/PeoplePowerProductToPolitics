@@ -8,6 +8,7 @@ TopRecipient.destroy_all
 Subsidiary.destroy_all
   puts "    Removed all previsious records"
 
+
 json_data.each do |json|
   name = json["name"]
   lobbying_dollars = json["total_lobby_dollars"]

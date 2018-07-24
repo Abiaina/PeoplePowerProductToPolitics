@@ -15,15 +15,14 @@ export default class ProductDetails extends React.Component {
         backendUrl: `https://p4api.herokuapp.com/company_details/`,
         upcUrl: 'https://api.upcitemdb.com/prod/trial/lookup?upc=',
         status: 'none',
-        brand:'none',
-        parentCompany: "",
-        lobbyingDollars: "",
+        brand:'no info',
+        parentCompany: "no info",
+        lobbyingDollars: "no info",
         topRecipients: [],
         companyShareHolders: [],
-        contributionDollars: "",
-        mostLobbiedBill: "",
-        list: ["Capito, Shelley Moore (R-WV)","Cohen, Steve (D-TN)","Collins, Susan M (R-ME)","Conaway, Mike (R-TX)","Dingell, Debbie (D-MI)","Foxx, Virginia (R-NC)", "Frelinghuysen, Rodney (R-NJ)",
-              "Grijalva, Raul M (D-AZ)"]
+        contributionDollars: "no info",
+        mostLobbiedBill: "no info",
+        mlbDescription: "no info"
         };
     }
 
@@ -38,7 +37,9 @@ export default class ProductDetails extends React.Component {
         topRecipients: data.top_recipients,
         companyShareHolders: data.company_share_holders,
         contributionDollars: data.contribution_dollars,
-        mostLobbiedBill: data.most_lobbied_bill.name,
+        mostLobbiedBill: data.most_lobbied_bill,
+        mlbDescription: data.mlb_description,
+
       })
     })
     .catch((error) => {
@@ -111,6 +112,12 @@ console.log(this.state.topRecipients);
 
           <View style={styles.data}>
             <Text>Most Lobbied Bill: {this.state.mostLobbiedBill}</Text>
+            <FlatList
+              data={this.state.mlbDescription}
+              renderItem={({item}) => (
+                <Text>{item.name}</Text>
+               )}
+            />
           </View>
         </View>
       </ScrollView>
