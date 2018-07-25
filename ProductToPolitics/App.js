@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppRegistry, StyleSheet, Text, View, Button, Image } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, Button, Image, TouchableOpacity } from 'react-native';
 import ScanContainer from './components/ScanContainer'
 import ProductDetails from './components/ProductDetails'
 import About from './components/About'
@@ -37,21 +37,25 @@ export default class App extends React.Component {
 
   homeButton () {
     return (
-      <Button onPress={this.resetHomeState}
-        title="Home"
-        color='green'
-        accessibilityLabel="Home"
-        />
+      <View>
+        {this._renderButton('Home', this.resetHomeState)}
+      </View>
     )
   }
 
+  _renderButton = (text, onPress) => (
+    <TouchableOpacity onPress={onPress}>
+      <View style={styles.button}>
+        <Text style={{ color:'white' }}>{text}</Text>
+      </View>
+    </TouchableOpacity>
+  );
+
   scanButton () {
     return (
-      <Button onPress={this.toggleState}
-        title="Scan Barcode"
-        color="black"
-        accessibilityLabel="Scan barcode"
-        />
+    <View>
+      {this._renderButton('Scan', this.toggleState)}
+    </View>
     )
   }
 
@@ -83,12 +87,13 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
       <LinearGradient
-            colors={['white', '#FDB813']}
+            colors={['white', 'rgb(30,144,255)']}
             style={{alignItems: 'center', flex: 1, alignSelf: 'stretch' }}>
 
           <View style={styles.header}>
             <Image source={require('./P2.png')}/>
-            <Text>Product To Politics</Text>
+            <Text style={{fontSize: 12,
+              fontWeight: 'bold',}}>Product To Politics</Text>
           </View>
           <View style={styles.dataContainer}>
           {(this.state.barcodeData !== null) ?
@@ -123,18 +128,28 @@ const styles = StyleSheet.create({
     },
     header: {
       alignSelf: 'stretch',
-      height: 100,
-      backgroundColor: 'rgba(255, 255, 255, 0.2)',
+      height: 75,
       alignItems: 'center',
       justifyContent: 'center',
       flexDirection: 'row',
       padding: 10,
     },
+    button: {
+      backgroundColor: 'rgba(0, 0, 0, 0.6)',
+      padding: 10,
+      margin: 10,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: 4,
+      borderWidth: 2,
+      width: 100,
+      borderColor: 'rgba(255, 255, 255, 0.35)',
+    },
     navButtonContainer: {
       alignSelf: 'center',
       height: 75,
       alignItems: 'center',
-      justifyContent: 'flex-end',
+      justifyContent: 'space-around',
       flexDirection: 'row',
       padding: 10,
     },
@@ -148,7 +163,7 @@ const styles = StyleSheet.create({
     dataContainer: {
       flex: 1,
       alignSelf: 'stretch',
-      alignItems: 'flex-start',
+      alignItems: 'center',
       justifyContent: 'center',
       flexDirection: 'column',
       padding: 10,
@@ -160,5 +175,8 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       flexDirection: 'column',
       padding: 25,
+    },
+    dataText: {
+
     },
 });

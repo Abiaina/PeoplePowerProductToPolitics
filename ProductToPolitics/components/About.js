@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, TouchableOpacity, StyleSheet, View } from 'react-native';
+import { Text, TouchableOpacity, StyleSheet, View, ScrollView } from 'react-native';
 import Modal from 'react-native-modal'; // 2.4.0
 
 
@@ -11,23 +11,27 @@ export default class About extends Component {
   _renderButton = (text, onPress) => (
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
-        <Text>{text}</Text>
+        <Text style={{ color:'white' }}>{text}</Text>
       </View>
     </TouchableOpacity>
   );
 
   _renderModalContent = () => (
     <View style={styles.modalContent}>
-      <Text>How we work:</Text>
-      <Text>Ever wonder about the companies you interact {'with'} everyday {'?'}</Text>
-      <Text>Scan any barcode {'of'} a product</Text>
-      <Text>Learn the political impacts {'of'} your purchase</Text>
-
-      <Text>Data Source:</Text>
-      <Text>Open Secrets API</Text>
-      <Text>upcitemdb API</Text>
-      <Text>{'govtrack.us'}</Text>
+    <ScrollView>
+      <View style={styles.data}>
+        <Text style={styles.dataTitle}>How we work</Text>
+        <Text> - Ever wonder about the companies you interact {'with'} everyday {'?'}</Text>
+        <Text> - Scan any barcode {'of'} a product to learn the political impacts {'of'} your purchase</Text>
+      </View>
+      <View style={styles.data}>
+        <Text style={styles.dataTitle}>Data Sources</Text>
+        <Text> - Open Secrets API</Text>
+        <Text> - upcitemdb API</Text>
+        <Text> - {'govtrack.us'}</Text>
+      </View>
         {this._renderButton('Close', () => this.setState({ visibleModal: null }))}
+      </ScrollView>
     </View>
   );
 
@@ -50,13 +54,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button: {
-    backgroundColor: 'rgba(255, 255, 255, 0.4)',
+    backgroundColor: 'rgba(0, 0, 0, 0.6)',
     padding: 12,
     margin: 16,
     justifyContent: 'center',
     alignItems: 'center',
     borderRadius: 4,
-    borderColor: 'rgba(0, 0, 0, 0.1)',
+    borderWidth: 2,
+    width: 100,
+    borderColor: 'rgba(255, 255, 255, 0.35)',
   },
   modalContent: {
     backgroundColor: 'white',
@@ -69,5 +75,19 @@ const styles = StyleSheet.create({
   bottomModal: {
     justifyContent: 'flex-end',
     margin: 0,
+  },
+  data: {
+    flex: 1,
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    alignSelf: 'stretch',
+    padding: 15,
+    borderBottomWidth: 2,
+    borderColor: 'rgba(255,255,255, 0.2)',
+  },
+  dataTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 });

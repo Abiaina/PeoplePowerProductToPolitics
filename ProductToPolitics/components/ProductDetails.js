@@ -15,14 +15,14 @@ export default class ProductDetails extends React.Component {
         backendUrl: `https://p4api.herokuapp.com/company_details/`,
         upcUrl: 'https://api.upcitemdb.com/prod/trial/lookup?upc=',
         status: 'none',
-        brand:'no info',
-        parentCompany: "no info",
-        lobbyingDollars: "no info",
+        brand:'unknown',
+        parentCompany: "unknown",
+        lobbyingDollars: "unknown",
         topRecipients: [],
         companyShareHolders: [],
-        contributionDollars: "no info",
-        mostLobbiedBill: "no info",
-        mlbDescription: "no info"
+        contributionDollars: "unknown",
+        mostLobbiedBill: "unknown",
+        mlbDescription: "unknown"
         };
     }
 
@@ -70,54 +70,47 @@ console.log(this.state.topRecipients);
     return (
       <ScrollView>
         <View style={styles.dataContainer}>
-          <View style={styles.dataHeader}>
-            <Text>{this.state.brand} is a subsidiary of {this.state.parentCompany}</Text>
-          </View>
-          <View style={styles.dataHeader}>
-            <Text>Political Activity of {this.state.parentCompany}</Text>
-          </View>
-
-          <View style={styles.data}>
-            <Text>Lobbying Dollars: ${this.state.lobbyingDollars}</Text>
+          <View style={styles.parentCompany}>
+            <Text style={{ fontSize: 20,
+              fontWeight: 'bold',}}>Political Activity of {this.state.parentCompany}</Text>
+            <Text style={{ fontSize: 12,
+              fontWeight: 'bold',}}>{this.state.brand} is a subsidiary of {this.state.parentCompany}</Text>
           </View>
 
           <View style={styles.data}>
-            <Text>Contribution Dollars: ${this.state.contributionDollars}</Text>
+            <Text style={styles.dataTitle}>Lobbying Dollars</Text>
+            <Text>{this.state.lobbyingDollars}</Text>
           </View>
 
-          <View style={styles.dataList}>
-            <LinearGradient
-              colors={['#9DD1DB', 'white']}
-              style={styles.backgroundGradient}>
+          <View style={styles.data}>
+            <Text style={styles.dataTitle}>Contribution Dollars</Text>
+            <Text>{this.state.contributionDollars}</Text>
+          </View>
 
-                <Text>Top Contribution Dollar Recipients</Text>
+          <View style={styles.data}>
+                <Text style={styles.dataTitle}>Top Contribution Dollar Recipients</Text>
                   <FlatList
                     data={this.state.topRecipients}
                     renderItem={({item}) => (
-                      <Text>{item.name}</Text>
+                      <Text> - {item.name}</Text>
                      )}
                   />
-            </LinearGradient>
           </View>
 
           <View style={styles.data}>
-                <Text>Company Share Holders</Text>
+                <Text style={styles.dataTitle}>Company Share Holders</Text>
                 <FlatList
                   data={this.state.companyShareHolders}
                   renderItem={({item}) => (
-                    <Text>{item.name}</Text>
+                    <Text> - {item.name}</Text>
                    )}
                 />
           </View>
 
           <View style={styles.data}>
-            <Text>Most Lobbied Bill: {this.state.mostLobbiedBill}</Text>
-            <FlatList
-              data={this.state.mlbDescription}
-              renderItem={({item}) => (
-                <Text>{item.name}</Text>
-               )}
-            />
+            <Text style={styles.dataTitle}>Most Lobbied Bill</Text>
+            <Text style={{fontWeight:'bold'}}>{this.state.mostLobbiedBill}</Text>
+            <Text>{this.state.mlbDescription}</Text>
           </View>
         </View>
       </ScrollView>
@@ -125,42 +118,33 @@ console.log(this.state.topRecipients);
   }
 }
 const styles = StyleSheet.create({
-  dataContainer: {
-    flex: 4,
-    alignSelf: 'stretch',
-    backgroundColor: '#f8f8ff',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    padding: 10,
-  },
-  data: {
-    flex: 1,
-    alignSelf: 'stretch',
-    backgroundColor: 'rgba(255, 255, 255, 0.35)',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    padding: 15,
-    borderRadius: 4,
-    borderColor: 'rgba(10, 10, 10, 0.2)',
-  },
-  dataHeader: {
-    height: 40,
-    alignSelf: 'stretch',
-    backgroundColor: '#baedd3',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
-    flexDirection: 'column',
-    padding: 25,
-  },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'flex-start',
     flexDirection: 'column',
     padding: 10,
     alignSelf: 'stretch',
+  },
+  parentCompany: {
+    height: 50,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    alignSelf: 'stretch',
+  },
+  data: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    flexDirection: 'column',
+    alignSelf: 'stretch',
+    padding: 15,
+    borderBottomWidth: 2,
+    borderColor: 'rgba(255,255,255, 0.2)',
+  },
+  dataTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
   },
 });
