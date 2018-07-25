@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
-import { StyleSheet, Text, View, Image, Button, FlatList, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, FlatList, Linking, ScrollView } from 'react-native';
+import LearnMore from './LearnMore';
 import { BarCodeScanner, Permissions, LinearGradient } from 'expo';
 
 
@@ -113,8 +114,10 @@ console.log(this.state.topRecipients);
             <Text>{this.state.mlbDescription}</Text>
           </View>
 
-          <View>
-            `https://www.opensecrets.org/orgs/summary.php?id=${this.state.companyOSID}`
+          <View style={styles.data}>
+            <LearnMore
+              link={`https://www.opensecrets.org/orgs/summary.php?id=${this.state.companyOSID}`}
+            />
           </View>
         </View>
       </ScrollView>
