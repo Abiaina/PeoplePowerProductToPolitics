@@ -39,7 +39,7 @@ export default class ProductDetails extends React.Component {
         contributionDollars: data.contribution_dollars,
         mostLobbiedBill: data.most_lobbied_bill,
         mlbDescription: data.mlb_description,
-
+        companyOSID: data.company.opensecretid
       })
     })
     .catch((error) => {
@@ -111,6 +111,10 @@ console.log(this.state.topRecipients);
             <Text style={styles.dataTitle}>Most Lobbied Bill</Text>
             <Text style={{fontWeight:'bold'}}>{this.state.mostLobbiedBill}</Text>
             <Text>{this.state.mlbDescription}</Text>
+          </View>
+
+          <View>
+            `https://www.opensecrets.org/orgs/summary.php?id=${this.state.companyOSID}`
           </View>
         </View>
       </ScrollView>

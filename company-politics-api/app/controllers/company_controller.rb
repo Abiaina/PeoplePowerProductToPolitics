@@ -24,6 +24,7 @@ class CompanyController < ApplicationController
         mlb_description: company.most_lobbied_bill.description,
         top_recipients: company.top_recipients,
         subsidiaries: company.subsidiaries,
+        opensecretid: company.open_secret_id,
       },
       status: :ok
     else

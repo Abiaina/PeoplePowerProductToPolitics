@@ -16,7 +16,7 @@ json_data.each do |json|
   most_lobbied_bill = json["most_lobbied_bill"]
   share_holders = json["share_holder_politicians"]
   top_recipients = json["recipients"]
-  os_id = json["os_id"]
+  open_secret_id = json["os_id"]
   subsidiaries = json["subsidiaries"]
   mlb_description = json["mlb_description"]
 
@@ -31,7 +31,7 @@ json_data.each do |json|
     :name => name.upcase,
     :lobbying_dollars => lobbying_dollars,
     :contribution_dollars => contribution_dollars,
-    :open_secret_id => os_id,
+    :open_secret_id => open_secret_id,
     :most_lobbied_bill_id => bill.id,
     })
   puts "Created company #{company.name}"
