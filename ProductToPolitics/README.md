@@ -62,6 +62,8 @@ https://www.opensecrets.org/resources/datadictionary/UserGuide.pdf
 For the upc code database you will need a key from https://eandata.com/ . Update the .env in the rails app with the APIKey.
 Bundle install then deploy locally or on a server (heroku works great!).
 
+Also used https://www.upcitemdb.com/ as a backup database if the parent company info was missing. They have a trial api and you do not need an APIKey.
+
 ## Final Thoughts
 After you have deployed the backend with seeded data, and started the expo simulator on a phone/ipad, you should be able to run the app. Simply hit scan and scan a barcode. The app should show the product you are scanning and the political activities of its parent company (this may take a while as there are 2 API calls being made).
 
