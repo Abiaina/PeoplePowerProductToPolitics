@@ -8,8 +8,8 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 * [Simulators/Expo](#simulators/expo)
 * [Open Secrets Api](#open-secrets-api)
 * [EANdata Api](#eandata-api)
-* [Common Expo Errors](#common -expo-errors)
-* [Final Thoughts](#final -thoughts)
+* [Common Expo Errors](#common-expo-errors)
+* [Final Thoughts](#final-thoughts)
 
 
 
