@@ -8,6 +8,8 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 * [Simulators/Expo](#simulators/expo)
 * [Open Secrets Api](#open-secrets-api)
 * [EANdata Api](#eandata-api)
+* [Common Expo Errors](#common -expo-errors)
+
 
 
 
@@ -61,7 +63,7 @@ For the upc code database you will need a key from https://eandata.com/ . Update
 
 After you have deployed the backend with seeded data, and started the expo simulator on a phone/ipad, you should be able to run the app. Simply hit scan and scan a barcode. The app should show the product you are scanning and the political activities of its parent company (this may take a while as there are 2 API calls being made).
 
-Common Errors:
+## Common Expo Errors:
 - Expo is very picky. I find it easier to set up my developing environment first then starting expo via npm start.
 - Unpaired tags in the front end and displaying objects with a view/text tag will cause errors.
 - Test out code on expo.snack.io to help debug as well
