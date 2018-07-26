@@ -9,7 +9,7 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 * [Open Secrets Api](#open-secrets-api)
 * [EANdata Api](#eandata-api)
 * [Common Expo Errors](#common -expo-errors)
-
+* [Final Thoughts](#final -thoughts)
 
 
 
@@ -60,7 +60,9 @@ https://www.opensecrets.org/resources/datadictionary/UserGuide.pdf
 
 ## EANdata API
 For the upc code database you will need a key from https://eandata.com/ . Update the .env in the rails app with the APIKey.
+Bundle install then deploy locally or on a server (heroku works great!).
 
+## Final Thoughts
 After you have deployed the backend with seeded data, and started the expo simulator on a phone/ipad, you should be able to run the app. Simply hit scan and scan a barcode. The app should show the product you are scanning and the political activities of its parent company (this may take a while as there are 2 API calls being made).
 
 ## Common Expo Errors:
@@ -68,3 +70,4 @@ After you have deployed the backend with seeded data, and started the expo simul
 - Unpaired tags in the front end and displaying objects with a view/text tag will cause errors.
 - Test out code on expo.snack.io to help debug as well
 - Be aware that Expo is a framework for react native, it does not support all the react native libraries.
+-SDK 29 on android QR Code scanner to start running app does not work. After you do npm start select email/text project link and you can open the email link with expo on Andrio phones (Galaxy S7/S8)
