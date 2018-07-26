@@ -18,14 +18,29 @@ This project was bootstrapped with [Create React Native App](https://github.com/
 
 Android and IOS friendly app that allows you to scan almost any product's barcode and find out about its parent company's lobbying activity. 
 
+The webscrapping, front end and backend are separated into 3 repos:
+  -React Native Expo Front End:
+https://github.com/Abiaina/ProductPoliticsMobileApp
+  -Rails API (backend):
+https://github.com/Abiaina/CompanyPoliticsAPI
+  -Python Webscrapping for Seed Data:
+https://github.com/Abiaina/CompanyPoliticsWebScrapper
+
 ## Required Libraries
 Libraries are in the build files of each of the respective repos.
 For Rails API: bundle install
-For Python Webscrapper: You can use this to update the seed files, but I have already placed the seed files as a json in the Rails API.
+
+For Python Webscrapper:
+You can use this to update the seed files, but I have already placed the seed files as a json in the Rails API.
+
 $ rails db:reset
+
 $ rails db:seed
+
 This will seed the backend with the prescrapped data.
 
+# Front End React Native Expo
+https://github.com/Abiaina/ProductPoliticsMobileApp
 Before first running the front end do a npm install to install the necessary libraries.
 This is made on expo, please review the expo site to set up the react native environment.
 
